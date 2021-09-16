@@ -1,0 +1,98 @@
+.LoadingStatus {
+  position: relative;
+  text-align: center;
+
+  &:not(.inline) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 32px;
+    min-height: 32px;
+  }
+
+  &.inline {
+    width: 260px;
+    min-height: 150px;
+    margin: auto;
+  }
+}
+
+.LoadingStatus__spinner {
+  color: var(--primary-blue);
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 34px;
+  height: 34px;
+  animation: LoadingStatus__spinner_anim 1s linear infinite;
+
+  svg {
+    width: inherit;
+    height: inherit;
+    display: block;
+  }
+}
+
+@keyframes LoadingStatus__spinner_anim {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.LoadingStatus__failed {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+  .isvg {
+    width: 120px;
+    height: 120px;
+    display: block;
+
+    svg {
+      display: block;
+    }
+  }
+}
+
+.LoadingStatus__failed__icon_connection {
+  width: 120px;
+  height: 120px;
+  background: url("../../../../asset/120/failed.svg")
+    no-repeat center/contain;
+}
+
+.LoadingStatus__failed__icon {
+  width: 120px;
+  height: 120px;
+  background: url("../../../../asset/120/failed.svg") no-repeat
+    center/contain;
+}
+
+.LoadingStatus__failed__message {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 172px;
+}
+
+.LoadingStatus__failed__description {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-black);
+}
+
+.LoadingStatus .Button {
+  margin-top: 16px;
+}

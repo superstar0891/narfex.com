@@ -1,0 +1,110 @@
+@import "../../../../../vars";
+
+.Advantages {
+  padding: 160px 0;
+  text-align: center;
+
+  @media (max-width: @mobile-width) {
+    padding: 80px 0;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+
+    @media (max-width: @mobile-width) {
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin: 56px 0 0;
+
+    @media (max-width: @mobile-width) {
+      margin-top: 32px;
+    }
+
+    li {
+      box-sizing: border-box;
+      display: block;
+      width: 352px;
+      padding: 16px;
+
+      @media (max-width: @mobile-width) {
+        width: 100%;
+        margin-bottom: 64px;
+        text-align: center;
+      }
+    }
+
+    .isvg {
+      display: block;
+      width: 120px;
+      height: 120px;
+
+      @media (max-width: @mobile-width) {
+        margin: 0 auto;
+      }
+
+      svg {
+        display: block;
+        width: inherit;
+        height: inherit;
+      }
+    }
+
+    h4 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    p {
+      margin: 16px 0;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  @media (min-width: @mobile-width) {
+    &.alternative {
+      li {
+        display: flex;
+        flex-direction: row;
+        width: 544px;
+
+        h4 {
+          margin-bottom: 8px;
+        }
+
+        .isvg {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+
+  &.center {
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}

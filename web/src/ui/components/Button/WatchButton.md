@@ -1,0 +1,3 @@
+```js
+<WatchButton>Смотреть</WatchButton>
+```

@@ -1,0 +1,79 @@
+@import '../../../../../../vars';
+
+.CabinetTokenScreen__form {
+
+  .ContentBox__content {
+    padding: 40px;
+
+    @media (max-width: @mobile-width) {
+      padding: 16px;
+    }
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+
+    .CircleIcon {
+      margin-right: 16px;
+    }
+  }
+}
+
+.CabinetTokenScreen__block {
+  margin: 40px 0;
+}
+
+.CabinetTokenScreen__block__title {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.CabinetTokenScreen__block__row {
+  display: flex;
+
+  @media (max-width: @mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.CabinetTokenScreen__block__main {
+  flex: 1;
+}
+
+.CabinetTokenScreen__block__extra {
+  width: 184px;
+
+  @media (min-width: @mobile-width) {
+    margin-left: var(--gap-size);
+  }
+
+  @media (max-width: @mobile-width) {
+    margin-top: 24px;
+  }
+}
+
+.CabinetTokenScreen__block__extra__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.CabinetTokenScreen__block__extra__amount {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.CabinetTokenScreen__block__main__description {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+}

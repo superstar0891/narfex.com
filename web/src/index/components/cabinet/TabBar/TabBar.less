@@ -1,0 +1,66 @@
+.TabBar {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background: var(--primary-background);
+  border-radius: 8px 8px 0 0;
+  box-shadow: var(--main-shadow);
+  height: 48px;
+  z-index: 100;
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-gray);
+    flex: 1;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.active {
+      color: var(--primary-blue);
+
+      .TabBar__item__text {
+        font-weight: 600;
+      }
+    }
+
+    .isvg {
+      display: block;
+      line-height: 0;
+      height: 24px;
+      width: 24px;
+
+      svg {
+        display: inherit;
+        width: inherit;
+        height: inherit;
+      }
+    }
+
+    &__text {
+      font-size: 7px;
+      line-height: 12px;
+    }
+  }
+}
+
+.TabBar__item__primaryButton {
+  position: relative;
+  top: -8px;
+  display: flex;
+  background: var(--blue-gradient);
+  border-radius: 40px;
+  height: 40px;
+  width: 40px;
+  color: var(--white);
+
+  .isvg {
+    margin: auto;
+  }
+}

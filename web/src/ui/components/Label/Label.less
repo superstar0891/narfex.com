@@ -1,0 +1,58 @@
+.Label {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-left: 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 24px;
+  padding: 0 8px;
+  border: 1px solid #EDF0F5;
+  background: var(--primary-background);
+  z-index: 0;
+
+  &.haveAction {
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+
+  &:before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: inherit;
+    width: inherit;
+    background: #EDF0F5;
+    z-index: -1;
+  }
+
+  &.get {
+    border: 1px solid #95E5DD;
+    &:before { background: rgba(55, 180, 150, 0.1) }
+  }
+
+  &.post {
+    border: 1px solid #89b0e5;
+    &:before { background: rgba(137, 176, 229, 0.1) }
+  }
+
+  &.put {
+    border: 1px solid #9690e5;
+    &:before { background: rgba(150, 144, 229, 0.1) }
+  }
+
+  &.delete, &.del {
+    border: 1px solid #e5382f;
+    &:before { background: rgba(229, 56, 47, 0.1) }
+  }
+}

@@ -1,0 +1,61 @@
+.WalletTransactionModal {
+  &__icon {
+    position: absolute;
+    left: -16px;
+    top: 32px;
+  }
+}
+
+.WalletTransactionModal__status {
+  display: flex;
+  margin-top: 24px;
+}
+
+.WalletTransactionModal__status__row {
+  flex: 1;
+
+  &.right {
+    text-align: right;
+  }
+}
+
+.WalletTransactionModal__status__row__label {
+  color: var(--text-black);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.WalletTransactionModal__status__row__value {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 4px;
+
+  &.pending {
+    color: var(--primary-orange);
+  }
+
+  &.done {
+    color: var(--green);
+  }
+
+  &.canceled {
+    color: var(--red);
+  }
+}
+
+.adaptive {
+  .WalletTransactionModal {
+    &__icon {
+      left: 0;
+      right: 0;
+      top: -16px;
+      margin: 0 auto;
+    }
+
+    &__wrapper {
+      padding-top: 80px;
+    }
+  }
+}

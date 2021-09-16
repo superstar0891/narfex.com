@@ -1,0 +1,130 @@
+@import '../../../../../vars';
+
+.Promo {
+  height: 684px;
+  overflow: hidden;
+
+  @media (max-width: @mobile-width) {
+    height: auto;
+  }
+
+  .Promo__content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    @media (max-width: @mobile-width) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .Promo__content__text {
+    margin-left: 64px;
+    @media (max-width: @mobile-width) {
+      margin-left: 0;
+      text-align: center;
+    }
+
+    h1 {
+      width: 544px;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 56px;
+      margin-bottom: 32px;
+
+      @media (max-width: @mobile-width) {
+        width: 100%;
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 8px;
+      }
+    }
+
+    p {
+      width: 446px;
+      font-weight: normal;
+      font-size: 22px;
+      line-height: 32px;
+      padding-bottom: 32px;
+
+      @media (max-width: @mobile-width) {
+        width: 100%;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    .Promo__appButtons {
+      display: none;
+
+      @media (max-width: @mobile-width) {
+        display: flex;
+        width: min-content;
+        margin: 0 auto;
+      }
+    }
+
+
+    @media (max-width: @mobile-width) {
+      .Button {
+        width: 100%;
+      }
+    }
+  }
+
+  .Promo__buyNrfx {
+    cursor: pointer;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border: 1px solid var(--cloudy);
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding: 6px;
+    margin-top: 32px;
+
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+
+    @media (max-width: @mobile-width) {
+      display: none;
+    }
+
+    .Promo__buyNrfx__button {
+      padding: 4px 8px;
+      background: #f0f;
+      border-radius: 16px;
+      background: var(--orange-gradient);
+      color: var(--white);
+    }
+
+    .Promo__buyNrfx__label {
+      padding: 4px 8px;
+    }
+
+    a {
+      margin-left: 8px;
+    }
+  }
+
+  .Promo__image {
+    width: 880px;
+    height: 640px;
+    flex: 0 0 auto;
+    margin-right: -176px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./assets/promo.svg');
+
+    @media (max-width: @mobile-width) {
+      background-position: center;
+      background-size: cover;
+      width: calc(100% + 32px);
+      height: 420px;
+      margin-right: -16px;
+      margin-left: -16px;
+    }
+  }
+}

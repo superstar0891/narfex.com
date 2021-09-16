@@ -1,0 +1,56 @@
+.InfoCard {
+  text-align: center;
+  flex: 1;
+  box-sizing: border-box;
+  max-width: 410px;
+  margin: 0 auto;
+}
+
+.InfoCard__icon {
+  width: 80px;
+  height: 80px;
+  background: no-repeat center/contain;
+  margin: 0 auto;
+}
+
+.InfoCard__cont {
+  margin-top: 52px;
+}
+
+.InfoCard__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--black);
+}
+
+.InfoCard__caption {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-black);
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    .InfoCard__icon {
+      margin: 0 20px;
+      flex: 2;
+    }
+
+    .InfoCard__caption {
+      margin: 12px 0;
+    }
+
+    .InfoCard__cont {
+      margin: 0 10px;
+      flex: 8;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+.DepositInfoModal__icon {
+  position: absolute;
+  top: 32px;
+  left: -16px;
+}
+
+.DepositInfoModal__cont {
+  width: 616px;
+  padding: 40px;
+
+  .WalletCard {
+    margin-top: -16px;
+    margin-bottom: 24px;
+  }
+}
+
+.DepositInfoModal__withdrawAction {
+  text-align: center;
+  margin-top: 40px;
+
+  .Button {
+    min-width: 200px;
+  }
+}
+
+.DepositInfoModal__withdrawalHistory {
+  border-radius: 8px;
+  width: calc(100% + 80px);
+  margin: 0 -40px -40px;
+}
+
+.DepositInfoModal__columns {
+  display: flex;
+  width: 100%;
+}
+
+.DepositInfoModal__column {
+  flex: 1;
+  max-width: 50%;
+}
+
+.DepositInfoModal__withdrawal_form {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+
+  .Button {
+    margin-left: 16px;
+  }
+}
+
+.DepositInfoModal__withdrawal_form__currency {
+  color: var(--text-black);
+}
+
+.adaptive {
+  .DepositInfoModal {
+    &__wrapper {
+      padding-top: 80px;
+
+      .DepositInfoModal__cont {
+        padding-top: 48px;
+
+        .WalletCard {
+          margin: 16px 0 32px;
+        }
+      }
+    }
+
+    &__column {
+      display: block;
+
+      tbody {
+        display: block;
+      }
+
+      &:first-child {
+        margin-right: 16px;
+      }
+    }
+
+    &__icon {
+      left: 0;
+      right: 0;
+      top: -16px;
+      margin: 0 auto;
+    }
+
+    &__cont {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 24px 16px;
+
+      .InfoRow {
+        display: block;
+
+        td {
+          padding: 0;
+        }
+
+        &__label {
+          line-height: 16px;
+          text-align: left;
+          display: block;
+        }
+
+        &__value {
+          display: block;
+        }
+      }
+    }
+  }
+}

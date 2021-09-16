@@ -1,0 +1,144 @@
+.SwapForm {
+  margin-bottom: var(--gap-size);
+
+  .ContentBox__content {
+    padding: 40px;
+    padding-bottom: 32px;
+  }
+}
+
+.SwapForm__formWrapper {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.SwapForm__form {
+  flex: 1;
+}
+
+.SwapForm__form__label {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  margin-bottom: 16px;
+}
+
+.SwapForm__form__control {
+  margin-bottom: 16px;
+}
+
+.SwapForm__form__control__meta {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--gray);
+  margin: 8px 16px 0;
+
+  &.active {
+    cursor: pointer;
+
+    &:hover {
+      color: var(--primary-blue);
+    }
+  }
+}
+
+.SwapForm__separator {
+  position: relative;
+  width: 104px;
+  margin: 32px 0 40px;
+  display: flex;
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 1px;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: var(--black);
+    transform-origin: left center;
+    opacity: .2;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      transform: scaleX(.5);
+    }
+
+    @media (min-resolution: 3dppx) {
+      transform: scaleX(.32);
+    }
+  }
+}
+
+.SwapForm__switchButton {
+  position: relative;
+  margin: auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--blue-gradient);
+  color: var(--white);
+  display: flex;
+  cursor: pointer;
+  border: 8px solid var(--white);
+
+  .isvg {
+    transition: .3s ease;
+    margin: auto;
+    display: block;
+
+    svg {
+      display: block;
+    }
+  }
+
+  &:hover {
+    background: var(--dark-blue);
+  }
+
+  &::after {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    content: "";
+    height: 24px;
+    width: 24px;
+    display: block;
+    filter: invert(1);
+    background: url("../../../../../../asset/24px/loading.svg");
+    animation: Button__loader_anim 1s infinite linear;
+    z-index: 1;
+    opacity: 0;
+    transform: scale(.3);
+    transition: .3s ease;
+  }
+
+  &.loading {
+    pointer-events: none;
+
+    .isvg {
+      opacity: 0;
+      transform: scale(.3);
+    }
+
+    &::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.SwapForm__submitWrapper {
+  display: flex;
+
+  .Button {
+    margin: 0 auto;
+  }
+}

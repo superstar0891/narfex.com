@@ -1,0 +1,67 @@
+.EditorTooltip {
+  position: relative;
+  background: var(--text-black);
+  backdrop-filter: blur(8px);
+  padding: 4px;
+  padding-bottom: 8px;
+  border-radius: 8px;
+  color: var(--white);
+  width: fit-content;
+  max-width: 340px;
+  box-sizing: border-box;
+  text-align: center;
+  //transform: translate(-50%, -100%);
+  transition: opacity.2s ease;
+
+  &:not(.visible) {
+    transition: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    border: 8px solid transparent;
+    border-top-color: var(--text-black);
+    bottom: -16px;
+    width: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .EditorTooltip__item {
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 24px;
+    display: inline-block;
+    margin: 4px 2px;
+    padding: 2px 6px;
+    margin-bottom: 0;
+    border-radius: 4px;
+
+    &:hover {
+      background: rgba(255,255,255,.2);
+    }
+
+
+    &.bold {
+      font-weight: bold;
+    }
+
+    &.italic {
+      font-style: italic;
+    }
+
+    &.underline {
+      text-decoration: underline;
+      font-style: italic;
+    }
+
+    &.monospace, &.code, &.block {
+      font-family: monospace;
+    }
+  }
+}

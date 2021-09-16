@@ -1,0 +1,41 @@
+.VerificationBlock {
+  .CabinetSettingsScreen__content {
+    display: flex;
+
+    .CabinetSettingsScreen__content__status {
+      flex: 0 0 auto;
+      width: 120px;
+      margin-right: 32px;
+
+      .CabinetSettingsScreen__content__status__text {
+        text-align: center;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .ButtonWrapper {
+    margin-top: 24px;
+  }
+}
+
+.adaptive {
+  .CabinetSettingsScreen__content {
+    flex-direction: column;
+
+    .CabinetSettingsScreen__content__status {
+      width: 100%;
+      margin: 0 0 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .ButtonWrapper {
+    .Button {
+      width: 100%;
+    }
+  }
+}

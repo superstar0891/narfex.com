@@ -1,0 +1,101 @@
+.FiatRefillModal .MethodsList {
+  --horisontal-padding: 40px;
+
+  .MethodsList__item {
+    &.opened {
+      position: relative;
+      z-index: 2;
+      background: var(--primary-background);
+      box-shadow: var(--hover-shadow);
+      margin-top: -1px;
+
+      .MethodsList__item__title {
+        &:after {
+          opacity: 0;
+        }
+
+        .isvg {
+          transform: rotate(180deg);
+        }
+      }
+
+      .MethodsList__item__content {
+        height: auto;
+      }
+    }
+
+    .MethodsList__item__title {
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      padding: 16px var(--horisontal-padding);
+
+      &:after {
+        position: absolute;
+        bottom: 0;
+        content: "";
+        display: block;
+        border-bottom: 1px solid var(--light-gray);
+        width: calc(100% - (var(--horisontal-padding) * 2));
+      }
+
+      .isvg {
+        color: var(--gray);
+        display: block;
+        margin-left: auto;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .MethodsList__item__content {
+      overflow: hidden;
+      height: 0;
+      box-sizing: border-box;
+      padding: 0 var(--horisontal-padding);
+    }
+
+    .MethodsList__steps {
+      list-style: none;
+      padding-left: 0;
+
+      .MethodsList__steps__step {
+        display: flex;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 16px;
+        margin-bottom: 16px;
+
+        .Clipboard {
+          color: var(--dark-blue);
+        }
+
+        .MethodsList__steps__step__number {
+          align-self: baseline;
+          display: flex;
+          flex: 0 0 auto;
+          align-items: center;
+          justify-content: center;
+          margin-right: 16px;
+          margin-top: -4px;
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 16px;
+          color: var(--dark-blue);
+          border-radius: 50%;
+          height: 24px;
+          width: 24px;
+          border: 1px solid;
+        }
+      }
+    }
+
+    &:last-child .MethodsList__item__title::after {
+      display: none;
+    }
+  }
+}

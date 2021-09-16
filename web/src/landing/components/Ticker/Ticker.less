@@ -1,0 +1,71 @@
+.Ticker {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  background: var(--white);
+  overflow: hidden;
+
+  .Ticker__tape {
+    width: 10000px;
+    will-change: transform;
+    animation: slide 60s linear infinite;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 13px;
+    line-height: 16px;
+    margin: auto;
+    pointer-events: none;
+  }
+
+  .Ticker__market {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
+    margin: 0 8px;
+
+    & > * {
+      margin: 0 8px;
+    }
+
+    .Number {
+      white-space: nowrap;
+    }
+
+    .Ticker__market__name {
+
+    }
+
+    .Ticker__market__price {
+
+    }
+
+    &.skeleton {
+      .Ticker__market__name,
+      .Ticker__market__price,
+      .Ticker__market__diff {
+        background: var(--cloudy);
+        height: 1em;
+        width: 7em;
+      }
+      .Ticker__market__name {
+        background: var(--light-gray);
+      }
+      .Ticker__market__diff {
+        width: 3em;
+        background: rgba(55, 180, 150, .30);
+        opacity: .3;
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-4000px, 0);
+  }
+}

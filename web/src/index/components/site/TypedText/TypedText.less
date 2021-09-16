@@ -1,0 +1,18 @@
+.TypedText {
+  height: 50px;
+  width: fit-content;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 1em;
+    border-right: 3px solid var(--primary-orange);
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .TypedText {
+    margin: 0 auto;
+  }
+}

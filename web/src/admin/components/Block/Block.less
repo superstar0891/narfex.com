@@ -1,0 +1,44 @@
+.Block {
+  margin: 16px;
+
+  .ContentBox__content {
+    padding: 16px;
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &__rightContent {
+    margin-left: auto;
+  }
+
+  .TableMain {
+    margin: -16px;
+    margin-top: 0;
+    width: calc(100% + 32px);
+    overflow: visible;
+
+    .Table {
+      overflow: visible;
+
+      tbody tr:last-child {
+        td:first-child .Table__td__cont {
+          border-bottom-left-radius: 8px;
+        }
+
+        td:last-child .Table__td__cont {
+          border-bottom-right-radius: 8px;
+        }
+      }
+    }
+  }
+}

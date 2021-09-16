@@ -1,0 +1,31 @@
+.SiteTokenScreen__Address {
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  margin: var(--block-margin) auto;
+
+  h2 {
+    font-size: var(--title1-font-size);
+    line-height: var(--title1-line-height);
+    margin-bottom: 24px;
+  }
+
+  .SiteTokenScreen__Address__Clipboard {
+    width: fit-content;
+    margin: 0 auto;
+    border: 2px dashed var(--primary-blue);
+    border-radius: 32px;
+    padding: 32px;
+  }
+}
+
+@media (max-width: 800px) {
+  .SiteTokenScreen__Address {
+    text-align: left;
+
+    .SiteTokenScreen__Address__Clipboard {
+      padding: 16px;
+      border-radius: 16px;
+    }
+  }
+}

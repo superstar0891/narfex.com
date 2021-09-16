@@ -1,0 +1,63 @@
+@import '../../../../vars';
+
+.SwapConfirmModal {
+  .Modal__box {
+    width: 480px;
+  }
+
+  .SwapIndicator {
+    margin: 40px auto;
+  }
+}
+
+.SwapConfirmModal__row {
+  display: flex;
+  margin: 32px 0;
+}
+
+.SwapConfirmModal__column {
+  flex: 1;
+}
+
+.SwapConfirmModal__label {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--slate-gray);
+}
+
+.SwapConfirmModal__amount {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 4px 0;
+}
+
+.SwapConfirmModal__rate {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--dark-gray);
+}
+
+@media (min-width: @mobile-width) {
+  .SwapConfirmModal__column:last-child {
+    text-align: right;
+  }
+}
+
+
+@media (max-width: @mobile-width) {
+  .SwapConfirmModal {
+    .Modal__box {
+      width: 100%;
+    }
+  }
+
+  .SwapConfirmModal__row {
+    flex-direction: column;
+  }
+  .SwapConfirmModal__column {
+    margin: 16px 0;
+  }
+}

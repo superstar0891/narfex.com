@@ -1,0 +1,77 @@
+.CabinetTokenScreen__stages {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.CabinetTokenScreen__stages__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.CabinetTokenScreen__stages__list__item {
+  position: relative;
+  margin: 40px 0;
+
+  &:first-child {
+    margin-top: 24px;
+  }
+
+  strong {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 12px 0;
+  }
+
+  small {
+    margin-top: 12px;
+    display: block;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    color: var(--dark-gray);
+  }
+
+  &.active {
+    padding-left: 16px;
+
+    p {
+      margin: 8px 0;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: var(--dark-blue);
+    }
+
+    &:before {
+      position: absolute;
+      left:  0;
+      content: "";
+      display: block;
+      height: 100%;
+      width: 4px;
+      background: var(--blue-gradient);
+      border-radius: 2px;
+    }
+  }
+
+  &.old {
+    color: var(--dark-gray);
+  }
+}

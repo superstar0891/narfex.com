@@ -1,0 +1,13 @@
+.Hover {
+  transition: box-shadow 200ms ease-in-out;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: var(--hover-shadow);
+    z-index: 2;
+    transform: translateZ(2px);
+  }
+}

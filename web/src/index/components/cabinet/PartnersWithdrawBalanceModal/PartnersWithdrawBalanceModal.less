@@ -1,0 +1,51 @@
+@import "../../../../vars";
+
+@media (min-width: @mobile-width) {
+  .PartnersWithdrawBalanceModal {
+    .Modal__box {
+      padding: 40px;
+    }
+  }
+}
+
+.PartnersWithdrawBalanceModal__content {
+  text-align: center;
+}
+
+.PartnersWithdrawBalanceModal__label {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  margin-bottom: 8px;
+}
+
+.PartnersWithdrawBalanceModal__amount {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.PartnersWithdrawBalanceModal__row {
+  display: flex;
+  margin: 24px 0;
+
+  .Input {
+    flex: 1;
+  }
+
+  .Button {
+    margin-left: 16px;
+    width: auto !important;
+  }
+}
+
+.PartnersWithdrawBalanceModal .ButtonWrapper {
+  margin-top: 40px;
+}
+
+@media (max-width: @mobile-width) {
+
+  .PartnersWithdrawBalanceModal .ButtonWrapper {
+    margin-top: 24px;
+  }
+}

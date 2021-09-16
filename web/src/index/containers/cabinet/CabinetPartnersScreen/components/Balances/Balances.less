@@ -1,0 +1,69 @@
+@import '../../../../../../vars';
+
+.PartnersBalances {
+  margin-bottom: var(--gap-size);
+}
+
+.PartnersBalances__labels {
+  display: flex;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--gray);
+}
+
+.PartnersBalances__label:last-child {
+  margin-left: auto;
+}
+
+.PartnersBalances__list {
+  list-style: none;
+  padding: 0;
+  margin: 12px -8px -8px;
+}
+
+.PartnersBalances__balance {
+  cursor: pointer;
+  display: flex;
+  padding: 8px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  border-radius: 8px;
+  margin: 4px 0;
+
+  &:hover {
+    background: var(--alice-blue);
+
+    .PartnersBalances__balance__action {
+      color: var(--primary-blue);
+    }
+  }
+}
+
+.PartnersBalances__balance__name {
+  margin-right: auto;
+}
+
+.PartnersBalances__balance__amount {
+  font-weight: 600;
+}
+
+.PartnersBalances__balance__action {
+  height: 16px;
+  width: 16px;
+  margin-left: 9px;
+  color: var(--gray);
+
+  svg {
+    display: block;
+    height: 16px;
+    width: 16px;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .PartnersBalances__balance {
+    padding: 12px 8px;
+  }
+}

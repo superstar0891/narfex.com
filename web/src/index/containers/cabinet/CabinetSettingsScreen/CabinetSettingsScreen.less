@@ -1,0 +1,168 @@
+.CabinetSettingsScreen__padding_box {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.CabinetSettingsScreen__header.withPadding {
+  padding: 16px 16px 0;
+}
+
+.CabinetSettingsScreen__header {
+  width: 100%;
+  font-size: 16px;
+  color: var(--almost-black);
+  margin-bottom: 24px;
+}
+
+.CabinetSettingsScreen__main {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: var(--gap-size);
+
+  .ContentBox__content {
+    padding: 40px;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  .CabinetSettingsScreen__w100wrapper {
+    width: 100%;
+    display: flex;
+  }
+  .CabinetSettingsScreen__w100wrapper:hover {
+    .CabinetSettingsScreen__form.right {
+      .Button {
+        //opacity: 1;
+      }
+    }
+  }
+
+  .CabinetSettingsScreen__relative {
+    position: relative;
+
+    p {
+      font-size: 13px;
+      line-height: 24px;
+    }
+  }
+  .CabinetSettingsScreen__form.left {
+    flex: 1;
+
+    .CabinetSettingsScreen__input_field {
+      width: 100%;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .CabinetSettingsScreen__switch_field {
+      width: 100%;
+      display: flex;
+      margin-bottom: 40px;
+      font-size: 13px;
+
+      span {
+        height: 50px;
+        line-height: 50px;
+        display: flex;
+
+        .Switch {
+          margin: auto auto auto 16px;
+        }
+      }
+    }
+  }
+  .CabinetSettingsScreen__form.right {
+    flex: 0 0 auto;
+    align-self: flex-end;
+    margin-left: 16px;
+    width: 192px;
+
+    .Button {
+      width: 100%;
+      //opacity: 0;
+      //transition: @transition;
+      //-webkit-transition: @transition;
+      //-o-transition: @transition;
+      //-moz-transition: @transition;
+    }
+  }
+  .CabinetSettingsScreen__space {
+    width: 100%;
+    height: 40px;
+  }
+}
+
+.CabinetSettingsScreen__switch_item {
+  width: 100%;
+  padding: 8px 0px 8px 16px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  display: flex;
+  .text_span {
+    width: calc(100% - 60px);
+    height: 28px;
+    line-height: 28px;
+    font-size: 13px;
+  }
+
+  .switch_span {
+    width: 60px;
+  }
+
+  &:hover {
+    background-color: #fbf8f6;
+    border-color: #f5f1ee;
+  }
+}
+
+.CabinetWalletScreen__transactions_padding {
+  margin-top: var(--gap-size);
+}
+
+.adaptive {
+  .CabinetSettingsScreen {
+    &__main {
+      .ContentBox__content {
+        padding: 24px 16px;
+      }
+    }
+
+    &__space {
+      height: 0;
+    }
+
+    &__header {
+      margin-bottom: 16px;
+      line-height: 24px;
+    }
+
+    &__input_field {
+      margin-bottom: 25px !important;
+    }
+
+    &__relative {
+      margin-bottom: 48px;
+      display: block;
+    }
+
+    &__form {
+      &.left,
+      &.right {
+        margin-left: 0;
+        width: 100%;
+
+        .Button {
+          position: relative;
+          bottom: initial;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

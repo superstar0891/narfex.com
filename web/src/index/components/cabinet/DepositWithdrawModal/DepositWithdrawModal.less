@@ -1,0 +1,114 @@
+.DepositWithdrawModal {
+  .DepositWithdrawModal__content {
+    display: flex;
+    margin: 40px -28px 0;
+  }
+
+  .DepositWithdrawModal__icon {
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    top: 16px;
+    left: -32px;
+    background: no-repeat center / contain;
+  }
+
+  .DepositWithdrawModal__coll {
+    position: relative;
+    margin: 0 28px;
+
+    .LoadingStatus__wrap {
+      height: 128px;
+      width: 100%;
+
+      .LoadingStatus {
+        margin-left: -60px;
+        margin-top: -16px;
+      }
+    }
+
+    &.info .DepositWithdrawModal__row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .DepositWithdrawModal__row {
+    width: 280px;
+    height: 48px;
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.amount {
+      display: flex;
+
+      .Input {
+        flex: 1;
+      }
+
+      .Button {
+        width: auto;
+        margin-left: 16px;
+        padding: 0 24px;
+      }
+    }
+  }
+
+  .Input,
+  .Button {
+    width: 100%;
+  }
+
+  .DepositWithdrawModal__label {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--text-black);
+    margin-bottom: 8px;
+  }
+
+  .DepositWithdrawModal__amount {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+.adaptive {
+  .DepositWithdrawModal {
+    margin-top: 16px;
+  }
+
+  .DepositWithdrawModal__content {
+    flex-direction: column;
+    margin: 0;
+    margin-top: 16px;
+
+    .LoadingStatus__wrap {
+      height: 160px;
+
+      .LoadingStatus {
+        margin-left: auto;
+      }
+    }
+
+    .DepositWithdrawModal__row {
+      width: 100%;
+    }
+
+    .DepositWithdrawModal__coll {
+      margin: 0;
+    }
+  }
+
+  .DepositWithdrawModal__icon {
+    left: 0;
+    right: 0;
+    top: -32px;
+    margin: 0 auto;
+  }
+}

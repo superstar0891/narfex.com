@@ -1,0 +1,173 @@
+.FiatWithdrawalModal {
+  display: flex;
+  min-height: 700px;
+
+  .FiatWithdrawalModal__sideBar {
+    width: 304px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background: linear-gradient(
+      169.99deg,
+      var(--blue-gradient-color-start) 0%,
+      var(--blue-gradient-color-end) 700px
+    );
+    color: var(--white);
+    padding: 40px;
+    box-sizing: border-box;
+
+    .FiatWithdrawalModal__sideBar__content {
+      box-sizing: border-box;
+      width: 100%;
+      margin-top: 96px;
+
+      .FiatWithdrawalModal__sideBar__amount {
+        margin-bottom: 24px;
+
+        small {
+          font-weight: 600;
+          font-size: 11px;
+          line-height: 16px;
+          display: block;
+        }
+
+        strong {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      .FiatWithdrawalModal__sideBar__fee {
+        small {
+          font-weight: 500;
+          font-size: 11px;
+          line-height: 16px;
+          display: block;
+        }
+
+        strong {
+          font-weight: 500;
+          font-size: 11px;
+          line-height: 16px;
+        }
+      }
+
+      hr {
+        border: 0;
+        border-bottom: 1px solid var(--white);
+        margin: 24px 0;
+      }
+    }
+  }
+
+  .FiatWithdrawalModal__body {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 496px;
+    display: flex;
+    flex-direction: column;
+
+    .FiatWithdrawalModal__body__content {
+      flex: 1;
+
+      & > p {
+        margin: 32px 0;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 16px;
+      }
+
+      .FiatWithdrawalModal__accountName {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+
+        span {
+          cursor: pointer;
+          color: var(--dark-blue);
+        }
+      }
+    }
+
+    .FiatWithdrawalModal__body__footer {
+      margin-top: auto;
+    }
+
+    .Form {
+      width: 320px;
+    }
+  }
+
+  .FiatWithdrawalModal__header {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .FiatWithdrawalModal__dataList {
+    display: block;
+    list-style: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0;
+
+    li {
+      margin: 32px 0;
+
+      .value {
+        color: var(--dark-blue);
+      }
+    }
+  }
+
+  .BankList {
+    margin: 24px -40px;
+  }
+}
+
+.adaptive {
+  .FiatWithdrawalModal {
+    flex-direction: column;
+
+    .FiatWithdrawalModal__header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .FiatWithdrawalModal__sideBar {
+      text-align: center;
+      flex-direction: column;
+      padding: 40px 16px !important;
+      background-image: var(--blue-gradient);
+      display: flex;
+      align-items: center;
+      border-radius: 0;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+
+      .FiatWithdrawalModal__sideBar__content {
+        margin-top: 0;
+      }
+    }
+
+    .FiatWithdrawalModal__sideBar,
+    .FiatWithdrawalModal__body {
+      width: 100%;
+      padding: 16px;
+    }
+
+    .FiatWithdrawalModal__body {
+      form {
+        width: 100%;
+      }
+    }
+
+    .BankList {
+      margin: 24px -16px;
+    }
+  }
+}

@@ -1,0 +1,292 @@
+@import '../../../../vars';
+
+.MerchantModal {
+  .LoadingStatus__wrap {
+    height: 150px;
+    width: 240px;
+  }
+
+  .Modal__box {
+    overflow: hidden;
+  }
+
+  .Modal__box__close {
+    z-index: 2;
+  }
+
+  .MerchantModal__list {
+    position: relative;
+    width: 480px;
+    margin: 0 -40px -32px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      content: "";
+      display: block;
+      height: 16px;
+      width: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.07), transparent);
+      z-index: 2;
+    }
+  }
+  .MerchantModal__item {
+    position: relative;
+    cursor: pointer;
+    height: 120px;
+    display: flex;
+    padding: 0 8px;
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: block;
+      width: calc(100% - 176px);
+      left: 0;
+      right: 0;
+      position: absolute;
+      height: 1px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      background: #f5f1ee;
+      bottom: 0;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    .MerchantModal__item__icon {
+      padding: 16px;
+
+      .isvg {
+        display: block;
+        font-size: 0;
+        width: 48px;
+      }
+    }
+
+    .MerchantModal__item__content {
+      flex: 1;
+
+      .MerchantModal__item__content__name {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .MerchantModal__item__content__commission,
+      .MerchantModal__item__content__currencies {
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 16px;
+        margin-top: 8px;
+        color: var(--text-black);
+
+        span {
+          color: var(--almost-black);
+        }
+      }
+    }
+
+    .MerchantModal__item__methods {
+      width: 100px;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 16px;
+      text-align: right;
+
+      .isvg {
+        font-size: 0;
+        width: 48px;
+        height: 24px;
+      }
+    }
+
+    .MerchantModal__item__arrow {
+      padding: 16px;
+
+      .isvg {
+        display: block;
+        font-size: 0;
+        width: 24px;
+      }
+    }
+  }
+
+  .MerchantModal__form {
+    width: 344px;
+
+    .MerchantModal__form__wallet {
+      display: flex;
+      align-items: center;
+
+      .Dropdown {
+        flex: 1;
+      }
+
+      .MerchantModal__form__wallet__icon {
+        flex: 0 0 auto;
+        margin-right: 16px;
+      }
+    }
+  }
+
+  .MerchantModal__form__input__wrapper {
+    margin-top: 24px;
+  }
+
+  .MerchantModal__form__input__description {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    color: var(--text-black);
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+  }
+
+  .MerchantModal__form__description__fee {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 8px;
+  }
+
+  .MerchantModal__form__description__total {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--primary-blue);
+  }
+
+  .MerchantModal__form__description {
+    text-align: center;
+    margin: 24px 0 40px;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  .MerchantModal__form__fee {
+    text-align: center;
+    margin: 40px 0 88px;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 500;
+    color: var(--almost-black);
+  }
+
+  .MerchantModal__buttons {
+    display: flex;
+    margin: 0 -12px;
+
+    .Button {
+      width: 100%;
+      padding: 0;
+    }
+
+    & > * {
+      flex: 1;
+      margin: 0 12px;
+    }
+  }
+
+  .MerchantModal__invoice {
+    width: 344px;
+
+    .List {
+      font-size: 13px;
+      line-height: 16px;
+      margin: 32px 0 64px;
+
+      .List__item__label {
+        min-width: 136px;
+      }
+    }
+  }
+
+  .MerchantModal__invoice__amount {
+    text-align: center;
+
+    .MerchantModal__invoice__label {
+      font-size: 13px;
+      line-height: 16px;
+      color: var(--text-black);
+    }
+
+    .MerchantModal__invoice__value {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+      color: var(--link-color);
+    }
+  }
+
+  .MerchantModal__invoice__link {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 28px auto;
+    text-align: center;
+
+    a {
+      text-decoration: inherit;
+      color: inherit;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .isvg {
+      width: 24px;
+      height: 24px;
+      margin-left: 5px;
+    }
+  }
+}
+
+@media (min-width: @mobile-width) {
+  .MerchantModal {
+    .Modal__header {
+      font-size: 16px;
+      line-height: 24px;
+      margin: -32px -40px 0;
+      padding: 42px 0 22px;
+      width: calc(100% + 80px);
+    }
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .MerchantModal {
+    .MerchantModal__form {
+      width: 100%;
+    }
+
+    &.MerchantModal__list_wrapper .Modal__box {
+      background: none;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    .MerchantModal__list {
+      width: 100%;
+      margin: 0;
+
+      &::before {
+        display: none;
+      }
+
+      .MerchantModal__item {
+        background: var(--primary-background);
+        margin-bottom: 16px;
+        border-radius: 8px;
+        box-shadow: var(--main-shadow);
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+    .LoadingStatus__wrap {
+      width: 100%;
+    }
+  }
+}

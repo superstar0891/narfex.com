@@ -1,0 +1,41 @@
+.Notifications {
+  box-shadow: var(--hover-shadow);
+  z-index: 1;
+
+  & > .ContentBox__content {
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .HistoryTable {
+    border: 0;
+    .ContentBox__content {
+      padding: 0;
+    }
+  }
+
+  .HistoryTable {
+    --horisontal-padding: 40px;
+    --vertical-padding: 16px;
+
+    .HistoryItem {
+      border-radius: 0;
+    }
+  }
+}
+
+.Notifications__scroll {
+  overflow-y: scroll;
+  max-height: 400px;
+  min-height: 250px;
+}
+
+.Notifications__buttonWrapper {
+  display: flex;
+  padding: 16px;
+
+  .Button {
+    margin: auto;
+    margin-bottom: 8px;
+  }
+}

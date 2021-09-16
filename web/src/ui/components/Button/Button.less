@@ -1,0 +1,328 @@
+@import '../../../vars';
+@import "../../vars";
+
+.Button {
+  --button-height: 48px;
+  outline: none;
+  border: none;
+  font-family: @font-family;;
+  padding: 0 32px;
+  background: var(--blue-gradient);
+  color: var(--dark-blue);
+  border-radius: @border-radius;
+  display: inline-flex;
+  height: var(--button-height);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow 150ms ease-in-out;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  box-sizing: border-box;
+  z-index: 0;
+
+  &.buy,
+  &.success {
+    background: var(--green);
+    color: var(--primary-background);
+  }
+
+  &.sell,
+  &.danger {
+    background: var(--red);
+    color: var(--primary-background);
+  }
+
+  &:not(.lite):not(.secondary) {
+    color: var(--primary-background);
+  }
+
+  &.loading {
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &.smallPadding {
+    padding: 0 16px;
+  }
+
+  &.forCabinet {
+    background: linear-gradient(47.71deg, #ffc75d 21.44%, #ffa363 76.19%);
+  }
+
+  &:after {
+    content: "";
+    background: inherit;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform: rotate(180deg);
+    transition: opacity 150ms ease-in-out;
+  }
+
+  &.default:hover {
+    opacity: .92;
+    box-shadow: 0 4px 8px rgba(64, 112, 255, 0.32);
+  }
+
+  &:active {
+    opacity: 1;
+    box-shadow: none;
+
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &.small {
+    --button-height: 32px;
+    padding: 0 16px;
+  }
+
+  &.ultra_small {
+    --button-height: 24px;
+    padding: 0 8px;
+    border-radius: 6px;
+  }
+
+  &.middle {
+    --button-height: 40px;
+    padding: 0 24px;
+  }
+
+  &.large {
+    text-align: center;
+
+    .Button__cont {
+      justify-content: center;
+    }
+  }
+
+  &.extra_large {
+    --button-height: 64px;
+
+    .Button__label {
+      font-size: 15px;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.65;
+  }
+
+  &.secondary {
+    background: transparent;
+    color: var(--dark-blue);
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(64, 112, 255, 0.12);
+    }
+
+    &:after {
+      background: var(--primary-blue);
+      opacity: .12;
+    }
+
+    &:hover:after {
+      opacity: .16;
+    }
+
+    &:active:after {
+      opacity: .24;
+    }
+  }
+
+  &.lite {
+    background: transparent;
+    box-shadow: none;
+
+    //background: rgba(64, 112, 255, 0.24);
+
+    &:after {
+      background: var(--primary-blue);
+      opacity: 0;
+    }
+
+    &:hover:after {
+      opacity: .12;
+    }
+
+    &:active:after {
+      opacity: .24;
+    }
+  }
+
+  &.negative {
+    background: var(--red);
+
+    &:hover {
+      opacity: .95;
+      box-shadow: 0 4px 8px rgba(255, 68, 51, 0.32);
+    }
+
+    &:active {
+      background: var(--text-red);
+    }
+  }
+
+  &.green {
+    background: var(--green);
+
+    &:hover {
+      opacity: .95;
+      box-shadow: 0 4px 8px rgba(0, 178, 119, 0.32);
+    }
+
+    &:active {
+      background: var(--text-green);
+    }
+  }
+}
+
+.Button__loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 16px;
+  height: 16px;
+  z-index: 5;
+  animation: Button__loader_anim 1s infinite linear;
+}
+
+@keyframes Button__loader_anim {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Button__label {
+  //transition: color 150ms ease-in-out;
+  margin: auto;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+  z-index: 2;
+
+  .Button.small & {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .Button.ultra_small & {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 11px;
+  }
+
+  .Button.middle & {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.Button__cont {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+
+  .Button.loading & {
+    opacity: 0;
+  }
+}
+
+.WatchButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 45px;
+  padding: 0 12px;
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.WatchButton__icon {
+  width: 28px;
+  height: 28px;
+  background: var(--orange-gradient);
+  border-radius: 50%;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../asset/watch_button_icon_28.svg") no-repeat
+      center/contain;
+  }
+}
+
+.WatchButton__label {
+  font-weight: 500;
+  font-size: 15px;
+  margin-left: 14px;
+  color: var(--primary-orange);
+}
+
+.buttonFontSizeStyle {
+  font-size: 15px !important;
+}
+
+.ButtonWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .Button {
+    margin: 0 8px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &.left {
+    justify-content: flex-start;
+  }
+  &.right {
+    justify-content: flex-end;
+  }
+  &.justify {
+    justify-content: space-between;
+  }
+  &.center {
+    justify-content: center;
+  }
+  &.fill .Button {
+    flex: 1;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .Button {
+    &.extra_large {
+      --button-height: 56px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.CookieUsage {
+  background: var(--primary-background);
+  box-shadow: var(--main-shadow);
+  border-radius: 8px;
+  padding: 24px;
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  z-index: 10000;
+  width: 528px;
+
+  @media (max-width: 600px) {
+    width: 80%;
+    right: 5px;
+    bottom: 5px;
+  }
+
+  .CookieUsage__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.444444px;
+    color: var(--black);
+  }
+
+  .CookieUsage__text {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.444444px;
+    color: var(--text-black);
+    padding: 16px 0;
+
+    span {
+      color: var(--black);
+    }
+  }
+
+  .Button {
+    float: right;
+  }
+}

@@ -1,0 +1,63 @@
+.BankList {
+  .BankList__item {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 32px 40px;
+    color: var(--almost-black);
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      margin: 0 40px;
+      background: var(--gray);
+      opacity: 0.4;
+    }
+
+    &:hover {
+      box-shadow: var(--hover-shadow);
+      background: var(--white);
+
+      &::after {
+        opacity: 0;
+      }
+    }
+
+    .BankList__item__title {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+    }
+    .BankList__item__arrow {
+      color: var(--gray);
+      margin-left: 32px;
+      width: 24px;
+
+      .isvg {
+        width: inherit;
+
+        svg {
+          display: block;
+        }
+      }
+    }
+
+    .BankList__item__logo {
+      margin-left: auto;
+    }
+  }
+}
+
+.adaptive {
+  .BankList {
+    .BankList__item {
+      padding: 32px 16px;
+    }
+  }
+}

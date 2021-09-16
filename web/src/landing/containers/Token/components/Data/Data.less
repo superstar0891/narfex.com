@@ -1,0 +1,106 @@
+@import "../../../../../vars";
+
+.TokenData {
+  margin: 200px 0;
+
+  h2 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  @media (max-width: @mobile-width) {
+    margin: 100px 0;
+     p {
+       text-align: left !important;
+     }
+  }
+}
+
+.TokenData__scaleBlock {
+  margin-right: 32px;
+  width: 448px;
+  display: flex;
+
+  @media (max-width: @mobile-width) {
+    width: 100%;
+    margin: 0;
+    margin-top: 88px;
+  }
+}
+
+.TokenData__scaleWrapper {
+  margin: 0 auto;
+  display: flex;
+
+  @media (max-width: @mobile-width) {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.TokenData__scale {
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  background: var(--cloudy);
+  border: 1px solid var(--extra-light-gray);
+  border-radius: 40px;
+  width: 40px;
+  height: 304px;
+
+  @media (max-width: @mobile-width) {
+    width: 100%;
+    height: 24px;
+  }
+}
+
+.TokenData__scale__value {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 30%;
+  border-radius: 4px;
+  background: var(--primary-blue);
+
+  @media (max-width: @mobile-width) {
+    height: 100%;
+    left: 0;
+  }
+}
+
+.TokenData__numbers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+
+  @media (max-width: @mobile-width) {
+    padding: 0;
+  }
+}
+
+.TokenData__numbers__number {
+  h4 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  small {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  @media (max-width: @mobile-width) {
+    text-align: right;
+    margin-top: 8px;
+
+    &:last-child {
+      text-align: left;
+      position: absolute;
+      margin-top: -88px;
+    }
+  }
+}

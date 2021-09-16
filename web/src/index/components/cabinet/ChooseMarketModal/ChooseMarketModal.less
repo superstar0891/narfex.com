@@ -1,0 +1,162 @@
+.ChooseMarketModal {
+  overflow: hidden;
+  width: 720px;
+  position: relative;
+  z-index: 1;
+
+  .TableMain {
+    box-shadow: none;
+  }
+
+  .Modal__header {
+    margin: 16px 0;
+  }
+
+  &__value {
+    &.positive {
+      color: var(--green);
+    }
+
+    &.negative {
+      color: var(--red);
+    }
+  }
+
+  &__filters {
+    position: relative;
+    padding: 24px 16px;
+    box-shadow: var(--main-shadow);
+    z-index: 3;
+
+    &__buttons {
+      display: flex;
+      width: 400px;
+    }
+
+    &__form {
+      display: flex;
+
+      .Input,
+      .Button {
+        height: 40px;
+      }
+
+      .Input {
+        &__indicator {
+          height: 40px;
+          .isvg {
+            line-height: 0;
+            margin-right: -4px;
+          }
+        }
+      }
+
+      .Button {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+  }
+
+  &__icon {
+    z-index: 2;
+
+    &:last-child {
+      margin-left: -18px;
+      z-index: 1;
+    }
+  }
+
+  &__market {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    &_secondary {
+      color: var(--text-black);
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  &__market_list {
+    //overflow-y: scroll;
+    //max-height: calc(100vh - 350px);
+    //min-height: 400px;
+
+    .Table td {
+      &:first-child {
+        width: 108px;
+      }
+    }
+
+    tr.Hover {
+      height: 88px;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 0;
+        right: 0;
+        box-sizing: border-box;
+        margin: -1px auto 0;
+        width: calc(100% - 48px);
+        background: rgba(0, 0, 0, 0.1);
+      }
+
+      &:hover + .Hover::after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__chart {
+    .Chart {
+      width: 136px;
+    }
+  }
+}
+
+.ChooseMarketModal__wrapper {
+  .Modal__box__close {
+    z-index: 4;
+  }
+}
+
+.adaptive {
+  .ChooseMarketModal {
+    width: auto;
+
+    &__filters {
+      box-shadow: none;
+      z-index: auto;
+
+      &__form {
+        flex-direction: column;
+      }
+
+      &__buttons {
+        width: 100%;
+        margin-top: 16px;
+
+        .Button {
+          height: 24px;
+        }
+
+        .Button:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .Modal__header {
+      margin: 0;
+    }
+  }
+}

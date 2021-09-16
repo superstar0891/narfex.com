@@ -1,0 +1,56 @@
+.Menu {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--almost-black);
+
+  & &__section {
+    margin: 16px 0;
+
+    .ContentBox__content {
+      padding: 8px 0;
+    }
+
+    &__noSpacing {
+      padding: 0;
+    }
+
+    &__title {
+      margin: 16px;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      color: inherit;
+      padding: 16px;
+      text-decoration: none;
+
+      .isvg {
+        width: 24px;
+        height: 24px;
+        line-height: 0;
+        display: block;
+        color: var(--text-black);
+        margin-right: 16px;
+
+        svg {
+          width: inherit;
+          height: inherit;
+          display: block;
+        }
+      }
+
+      &__flag {
+        width: 16px !important;
+        height: 12px !important;
+        border: 1px solid var(--text-black);
+      }
+
+      .Switch {
+        margin-top: 0;
+        margin-left: auto;
+      }
+    }
+  }
+}

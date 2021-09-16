@@ -1,0 +1,87 @@
+@import '../../../../../../vars';
+
+.WalletHeader {
+  margin-bottom: var(--gap-size);
+
+  .ContentBox__content {
+    padding: 40px;
+    display: flex;
+  }
+}
+
+.WalletHeader__content {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  min-height: 96px;
+}
+
+.WalletHeader__buttons {
+  .Button {
+    width: 120px;
+    display: block;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.WalletHeader__amount {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.WalletHeader__label {
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.WalletHeader__label__currency {
+  font-weight: 600;
+}
+
+.WalletHeader__label__usd {
+  margin-left: 24px;
+  color: var(--dark-gray);
+}
+
+
+@media (max-width: @mobile-width) {
+  .WalletHeader {
+    .ContentBox__content {
+      flex-direction: column;
+      padding: 24px 16px;
+      text-align: center;
+    }
+  }
+
+  .WalletHeader__content {
+    min-height: 0;
+    margin-bottom: 16px;
+  }
+
+  .WalletHeader__amount {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .WalletHeader__label__usd {
+    margin-left: .5em;
+  }
+
+  .WalletHeader__buttons {
+    display: flex;
+    margin: 0 -8px;
+
+    .Button {
+      flex: 1;
+      margin: 0 8px;
+    }
+  }
+}

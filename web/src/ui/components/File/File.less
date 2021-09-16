@@ -1,0 +1,27 @@
+.File {
+  position: relative;
+  height: 48px;
+  background: var(--cloudy);
+  color: var(--text-black);
+  border-radius: 8px;
+  display: inline-flex;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 16px;
+
+  &:hover {
+    box-shadow: var(--hover-shadow);
+  }
+
+  input {
+    opacity: 0;
+    position: absolute;
+    transform: scale(5);
+    cursor: pointer;
+  }
+
+  .File__name {
+    margin: auto 16px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,62 @@
+.SiteTokenScreen__JoinUs {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  margin: var(--block-margin) auto;
+
+  .SiteTokenScreen__JoinUs__bgText {
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    font-weight: bold;
+    font-size: 260px;
+    margin: 100px -100px 0;
+    opacity: .05;
+  }
+
+  h2 {
+    position: relative;
+    z-index: 2;
+    font-size: var(--title1-font-size);
+    line-height: var(--title1-line-height);
+    margin-bottom: 24px;
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+    transform: translate(0);
+    transition-delay: .8s;
+
+    &:nth-child(2n) {
+      transition-delay: .9s;
+    }
+  }
+
+  .Button {
+    transition: transform 1s ease, opacity 1s ease;
+    transition-delay: 1.7s;
+    opacity: 1;
+    transform: scale(1);
+    margin-top: 48px;
+  }
+}
+
+.SiteTokenScreen__JoinUs.notVisible {
+  h2 {
+    opacity: 0;
+    transform: translate(0, 30px);
+  }
+  .Button {
+    transform: scale(.85);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .SiteTokenScreen__JoinUs {
+    .SiteTokenScreen__JoinUs__bgText {
+      font-size: 150px;
+      margin: 0;
+      line-height: 1em;
+    }
+  }
+}

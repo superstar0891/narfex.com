@@ -1,0 +1,58 @@
+.DocumentationMenu {
+  width: 200px;
+  position: relative;
+  color: var(--text-black);
+
+  .DocumentationMenu__controls {
+    margin-bottom: 16px;
+  }
+
+  .DocumentationMenu__editMode {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 8px 0;
+
+    .Switch {
+      margin: 0;
+      margin-left: auto;
+    }
+  }
+
+  .DocumentationMenu__list {
+    .DocumentationMenu__list__item {
+      display: block;
+      cursor: pointer;
+
+      &.active {
+        & > .DocumentationMenu__list__item__title {
+          font-weight: bold;
+          color: var(--almost-black);
+
+          &.active {
+            color: var(--dark-blue);
+            //padding-left: 18px;
+            border-left: 2px solid;
+            margin-left: -2px;
+          }
+        }
+      }
+
+      .DocumentationMenu__list__item__title {
+        display: block;
+        padding: 12px 16px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+
+
+    .DocumentationMenu__list {
+      margin-left: 14px;
+      border-left: 2px solid var(--light-gray);
+    }
+  }
+}

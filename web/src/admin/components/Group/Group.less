@@ -1,0 +1,23 @@
+.Group {
+  display: flex;
+  margin: 0;
+
+  & > * {
+    margin-right: 16px;
+    //align-self: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  & > .Button {
+    margin-right: 16px;
+  }
+
+  .Block {
+    align-self: auto;
+    flex: 1;
+    margin: 12px;
+  }
+}

@@ -1,0 +1,119 @@
+.WithdrawalModal {
+  width: 384px;
+  padding: 24px 48px 32px;
+  box-sizing: border-box;
+
+  &__success_icon {
+    margin: 30px auto 0;
+    width: 120px;
+    height: 120px;
+  }
+
+  &.success {
+    text-align: center;
+
+    h4 {
+      color: var(--green);
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    p {
+      color: var(--text-black);
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      margin: 16px 0 80px;
+    }
+  }
+}
+
+.WithdrawalModal__icon {
+  position: absolute;
+  top: 32px;
+  left: -16px;
+}
+
+.WithdrawalModal__row {
+  margin-top: 24px;
+}
+
+.WithdrawalModal__row_amount {
+  display: flex;
+
+  .Button {
+    margin-left: 16px;
+    flex: 0 0 auto;
+  }
+}
+
+.WithdrawalModal__row_amount__input {
+  flex: 1;
+}
+
+.WithdrawalModal__button_wrap {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.OpenDepositModal__ga_icon {
+  width: 24px;
+  height: 24px;
+  background: url("../../../../asset/24px/google-authenticator.svg") no-repeat
+    center/contain;
+}
+
+.WithdrawalModal__info_row {
+  margin-top: 24px;
+  text-align: center;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.WithdrawalModal__info_row__title {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--black);
+}
+
+.WithdrawalModal__info_row__caption {
+  margin-top: 8px;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--black);
+}
+
+.WithdrawalModal__without_drop_info {
+  margin: 24px 0;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.adaptive {
+  .WithdrawalModal {
+    padding: 40px 16px 24px;
+    width: 100%;
+
+    &__wrapper {
+      padding-top: 80px;
+    }
+
+    .Button {
+      width: auto;
+    }
+
+    &__icon {
+      left: 0;
+      right: 0;
+      top: -16px;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.LanguageModal {
+  .Modal__box {
+    max-height: 440px;
+    min-width: 320px;
+    overflow-y: auto;
+  }
+}
+
+.LanguageModal__cont {
+  padding: 20px;
+
+  .LanguageModal__cont__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.444444px;
+    color: var(--black);
+    margin: 0 0 30px;
+  }
+
+  .LanguageModal__cont__grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(60px, 1fr));
+    grid-gap: 12px 100px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, minmax(80px, 1fr));
+      grid-gap: 12px;
+    }
+
+    .LanguageModal__cont__lang {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 6px 10px;
+      border-radius: 4px;
+
+      &.current {
+        background: var(--alice-blue);
+      }
+
+      &:not(.display) {
+        display: none;
+      }
+
+      .isvg {
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.adaptive {
+  .LanguageModal {
+    .Modal__box {
+      padding: 0;
+    }
+
+    &__cont {
+      padding: 18px;
+
+      .LanguageModal__cont__grid {
+        display: block;
+      }
+
+      &__lang {
+        padding: 16px 0;
+
+        .isvg {
+          margin-right: 18px !important;
+        }
+      }
+    }
+  }
+}

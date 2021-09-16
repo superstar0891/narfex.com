@@ -1,0 +1,55 @@
+.Range {
+  position: relative;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--light-gray);
+  margin: 40px 0;
+
+  .Range__filler {
+    height: 100%;
+    background: var(--primary-blue);
+  }
+
+  .Range__thumb {
+    display: flex;
+    justify-content: center;
+    cursor: grab;
+    position: absolute;
+    margin-top: -6px;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-left: -8px;
+    background: white;
+    border: 4px solid var(--primary-blue);
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  .Range__label {
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: -25px;
+  }
+
+  &.disabled {
+    opacity: 0.8;
+    pointer-events: none;
+
+    .Range__filler {
+      background: var(--gray);
+    }
+
+    .Range__thumb {
+      border-color: var(--gray);
+    }
+  }
+}
+
+body.draggable {
+  user-select: none;
+}

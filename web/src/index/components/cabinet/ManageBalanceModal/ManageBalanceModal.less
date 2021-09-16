@@ -1,0 +1,49 @@
+.ManageBalanceModal {
+  width: 330px;
+
+  &__icon {
+    margin-right: 16px;
+  }
+
+  &__input_button {
+    display: flex;
+
+    .Button {
+      margin-left: 16px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+
+    .SwitchTabs,
+    .Dropdown {
+      flex: 1;
+    }
+  }
+
+  &__submit_wrap {
+    margin-bottom: 8px;
+
+    .Button {
+      width: 100%;
+    }
+  }
+}
+
+.adaptive {
+  .ManageBalanceModal {
+    width: 100%;
+
+    &__row {
+      &:first-child {
+        margin-top: 0;
+      }
+      .Button {
+        width: auto;
+      }
+    }
+  }
+}

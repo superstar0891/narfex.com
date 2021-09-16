@@ -1,0 +1,94 @@
+.RateDetailsModal {
+  width: 700px;
+
+  &__icon {
+    width: 72px;
+    height: 72px;
+    background: no-repeat center/contain;
+    position: absolute;
+    left: -32px;
+    top: 16px;
+  }
+
+  &__button_wrapper {
+    text-align: center;
+    margin: 24px 0 16px;
+
+    .Button {
+      width: 200px;
+    }
+  }
+
+  h3 {
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  &__lists {
+    display: flex;
+    margin: 0 -20px;
+    margin-top: 48px;
+
+    &__list {
+      flex: 1;
+      list-style: none;
+      padding: 0;
+      margin: 0 20px;
+    }
+
+    &__item {
+      margin-bottom: 16px;
+      font-size: 13px;
+      line-height: 24px;
+      display: flex;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          padding: 0;
+        }
+      }
+
+      .isvg {
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        flex: 0 0 auto;
+      }
+    }
+  }
+}
+.adaptive {
+  .RateDetailsModal {
+    width: 100%;
+
+    &__wrapper {
+      padding-top: 80px;
+    }
+
+    &__lists {
+      margin: 0;
+      margin-top: 16px;
+      flex-direction: column;
+
+      &__list {
+        margin-bottom: 16px;
+      }
+    }
+
+    &__icon {
+      left: 0;
+      right: 0;
+      top: -32px;
+      margin: 0 auto;
+    }
+
+    &__button_wrapper {
+      margin-bottom: 0;
+    }
+  }
+}

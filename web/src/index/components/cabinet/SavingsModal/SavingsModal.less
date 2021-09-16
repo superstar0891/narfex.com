@@ -1,0 +1,24 @@
+@import '../../../../vars';
+
+.SavingsModal {
+  .Modal__box {
+    width: 540px;
+  }
+
+  .SavingsModal__buttonWrapper {
+    margin-top: 40px;
+    display: flex;
+
+    .Button {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .SavingsModal {
+    .Modal__box {
+      width: 100%;
+    }
+  }
+}

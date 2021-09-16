@@ -1,0 +1,53 @@
+.Chart {
+  &.hovered {
+    .highcharts-axis-labels {
+      opacity: 0;
+    }
+  }
+}
+
+.Chart__tooltip {
+  background: var(--secondary-background);
+  z-index: 2;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 24px;
+  box-shadow: var(--main-shadow);
+  color: var(--almost-black);
+  border-radius: 8px;
+  padding: 0 8px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.Chart__tooltip_date {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--text-black);
+  margin-top: 8px;
+}
+
+.Chart__xaxis_invisible {
+  opacity: 0;
+}
+
+.Chart__legend_item {
+  color: var(--primary-background);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 28px;
+  border-radius: 16px;
+  padding: 1px 13px 0;
+  font-family: "Montserrat", sans-serif;
+
+  &:not(.visible) {
+    opacity: 0.5;
+  }
+}
+
+.Chart__legend_icon {
+  width: 40px;
+  height: 40px;
+  background-size: 60px;
+  background-position: center;
+}

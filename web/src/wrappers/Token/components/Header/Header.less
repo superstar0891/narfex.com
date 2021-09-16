@@ -1,0 +1,122 @@
+.TokenWrapper__header {
+  background: var(--text-black);
+  color: var(--white);
+  //margin-top: 100px;
+  position: sticky;
+  transition: box-shadow.3s ease;
+  top: 0;
+  z-index: 5;
+
+  &.shadow {
+    box-shadow: var(--main-shadow);
+  }
+
+  .TokenWrapper__content {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .TokenWrapper__header__logo {
+    .TokenWrapper__header__logo__normal {
+      width: 128px;
+      height: 48px;
+    }
+    .TokenWrapper__header__logo__mobile {
+      display: none;
+      width: 26px;
+      height: 39px;
+    }
+  }
+
+  .TokenWrapper__header__menu {
+    align-items: center;
+    margin-left: auto;
+    display: flex;
+
+    .Button.outline_white {
+      margin: 0 16px;
+    }
+
+    .Button.lite {
+      .Button__label {
+        color: var(--white);
+        display: flex;
+        text-transform: uppercase;
+        align-items: center;
+
+        & > span {
+          display: block;
+          text-align: right;
+          width: 24px;
+        }
+
+        svg {
+          display: block;
+          margin-left: 4px;
+          margin-bottom: -2px;
+        }
+      }
+    }
+  }
+
+  .TokenWrapper__header__menu__link {
+    padding: 16px;
+    display: block;
+    color: var(--gray);
+    font-size: var(--smoll-text-font-size);
+    line-height: var(--smoll-text-line-height);
+
+    &.active {
+      color: var(--white);
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: var(--dark-blue);
+    }
+
+    .Button {
+      margin: 0 24px;
+    }
+  }
+
+  .ActionsSheet__list {
+    left: auto;
+    right: 0;
+    top: 36px;
+  }
+
+  .TokenWrapper__menu {
+    z-index: 2;
+  }
+
+  .TokenWrapper__header__hamburgerButton {
+    position: relative;
+    z-index: 3;
+    display: none;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .TokenWrapper__header {
+    .TokenWrapper__content {
+      padding: 8px 16px;
+    }
+    .TokenWrapper__header__menu {
+      display: none;
+    }
+    .TokenWrapper__header__logo {
+      .TokenWrapper__header__logo__normal {
+        display: none;
+      }
+      .TokenWrapper__header__logo__mobile {
+        display: block;
+      }
+    }
+    .TokenWrapper__header__hamburgerButton {
+      display: block;
+    }
+  }
+}

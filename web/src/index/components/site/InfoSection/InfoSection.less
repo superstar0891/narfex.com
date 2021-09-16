@@ -1,0 +1,49 @@
+.InfoSection__infocards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 120px 10px;
+
+  @media (max-width: 992px) {
+    flex-wrap: wrap;
+  }
+
+  .InfoSection__infocard {
+    flex-basis: 390px;
+    margin: 30px 15px;
+  }
+}
+
+.InfoSection__divider {
+  width: 1px;
+  height: 140px;
+  background: #9a9a9a;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+}
+
+.InfoSection__link {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  cursor: pointer;
+  text-decoration: none !important;
+
+  &:after {
+    content: "";
+    width: 5px;
+    height: 9px;
+    background: url("../../../../asset/site/link_arrow.svg") no-repeat
+      center/contain;
+    margin-left: 6px;
+    display: block;
+    flex: 0 0 auto;
+    transition: transform 150ms ease-in-out;
+  }
+
+  &:hover:after {
+    transform: translateX(2px);
+  }
+}

@@ -1,0 +1,47 @@
+@import '../../../../../../vars';
+
+.SavingsBlock {
+  margin-bottom: var(--gap-size);
+
+  .ContentBox__content {
+    padding: 40px;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+  }
+}
+
+.SavingBlock__content {
+  display: flex;
+
+  p {
+    max-width: 368px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .Button {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .SavingsBlock .ContentBox__content {
+    padding: 16px;
+  }
+  .SavingBlock__content {
+    flex-direction: column;
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    .Button {
+      width: 100%;
+    }
+  }
+}

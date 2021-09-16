@@ -1,0 +1,10 @@
+.Spoiler {
+  overflow: hidden;
+  transition: height 0.3s ease, opacity.3s ease;
+  opacity: 1;
+
+  &:not(.opened):not(.helper) {
+    height: 0 !important;
+    opacity: 0;
+  }
+}

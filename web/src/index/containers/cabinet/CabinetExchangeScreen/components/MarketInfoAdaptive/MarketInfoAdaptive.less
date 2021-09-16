@@ -1,0 +1,76 @@
+.MarketInfoAdaptive {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 13px;
+
+  .MarketInfoAdaptive__icons {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    margin-right: 10px;
+  }
+
+  .MarketInfoAdaptive__icons__icon {
+    position: absolute;
+    z-index: 2;
+
+    &:first-child {
+      z-index: 2;
+    }
+
+    &:last-child {
+      position: relative;
+      top: 16px;
+      left: 16px;
+      z-index: 1;
+    }
+  }
+
+  .MarketInfoAdaptive__info {
+    flex: 1;
+  }
+
+  .MarketInfoAdaptive__row {
+    display: flex;
+    align-items: baseline;
+
+    & > div {
+      &:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .MarketInfoAdaptive__day_price {
+    color: var(--text-black);
+    font-size: 11px;
+  }
+
+  .MarketInfoAdaptive__pair {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .MarketInfoAdaptive__pair__primary {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .MarketInfoAdaptive__pair__secondary {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-black);
+    margin-left: 0.3em;
+
+    &:before {
+      content: "/";
+      display: inline-block;
+      text-decoration: none;
+      margin-right: 4px;
+    }
+  }
+}

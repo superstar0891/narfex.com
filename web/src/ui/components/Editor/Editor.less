@@ -1,0 +1,61 @@
+.Editor {
+  position: relative;
+  display: block;
+  font-size: 13px;
+  line-height: 24px;
+
+  .Editor__shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 10px;
+    background: #f0f;
+    pointer-events: none;
+    opacity: .5;
+  }
+
+  .EditorTooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &.border {
+    border-radius: 8px;
+    box-shadow: var(--main-shadow);
+
+    .Editor__wrapper {
+      border-radius: inherit;
+      border: 1px solid transparent;
+      background: var(--white);
+      padding: 14px 16px;
+    }
+
+    &.focus .Editor__wrapper {
+      border-color: var(--primary-blue);
+    }
+  }
+
+
+  h1 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 32px;
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    min-height: 24px;
+    margin: 8px 0;
+  }
+}

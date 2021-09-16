@@ -1,0 +1,87 @@
+version: "3.5"
+services:
+
+  narfex-redis:
+    image: redis:alpine
+    container_name: narfex-redis
+    ports:
+      - "16378:6379"
+
+  narfex-mysql:
+    image: mysql:5.6
+    container_name: narfex-mysql
+    working_dir: /application
+    volumes:
+      - ../:/application
+    environment:
+      - MYSQL_ROOT_PASSWORD=adminPass
+      - MYSQL_DATABASE=narfex
+      - MYSQL_USER=narfex
+      - MYSQL_PASSWORD=narfexPass
+    ports:
+      - "3390:3306"
+
+  narfex-webserver:
+    image: nginx:alpine
+    container_name: narfex-webserver
+    working_dir: /application
+
+    volumes:
+      - ../:/application
+      - ./phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8080:80"
+
+  narfex-php-fpm:
+    build: phpdocker/php-fpm
+    container_name: narfex-php-fpm
+    working_dir: /application
+    environment:
+      - DB_HOST=narfex-mysql
+      - DB_NAME=narfex
+      - DB_USERNAME=narfex
+      - DB_PASSWORD=narfexPass
+      - GOOGLE_APPLICATION_CREDENTIALS=/application/narfex-com-6f672cebb372.json
+    volumes:
+      - ../:/application
+      - ./phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/7.2/fpm/conf.d/99-overrides.ini
+    ports:
+      - "9010:9000"
+
+  narfex-phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: narfex-phpmyadmin
+    volumes:
+      - ./phpdocker/pma/upload.ini:/usr/local/etc/php/php.ini
+    environment:
+      - PMA_HOST=narfex-mysql
+      - PMA_PORT=3306
+    depends_on:
+      - narfex-mysql
+    ports:
+      - "9080:80"
+    restart: always
+
+  narfex-phpredisadmin:
+    image: erikdubbelboer/phpredisadmin
+    container_name: narfex-phpredisadmin
+    environment:
+      - ADMIN_USER=admin
+      - ADMIN_PASS=admin
+      - REDIS_1_HOST=narfex-redis
+      - REDIS_1_PORT=6379
+    links:
+      - narfex-redis
+    ports:
+      - "9081:80"
+
+  narfex-clickhouse:
+    container_name: narfex-clickhouse
+    image: yandex/clickhouse-server
+    build: clickhouse/server
+    ports:
+      - 8123:8123
+      - 9005:9000
+    environment:
+      - CLICKHOUSE_USER=narfex
+      - CLICKHOUSE_PASSWORD=password

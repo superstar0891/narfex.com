@@ -1,0 +1,45 @@
+.CabinetWrapper {
+  display: flex;
+  flex-direction: column;
+  background: var(--alice-blue);
+  min-height: 100vh;
+  width: 100%;
+  min-width: 1368px;
+}
+
+.floatingButtonPadding {
+  width: 100%;
+}
+.adaptive {
+  .CabinetWrapper {
+    &__content {
+      padding-bottom: 48px;
+    }
+    .EmptyContentBlock {
+      min-height: 250px;
+    }
+    .Empty_box {
+      box-sizing: border-box;
+      padding-bottom: 24px;
+      h3 {
+        min-width: 80%;
+        font-size: 14px;
+      }
+      svg {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+
+  .floatingButtonPadding {
+    width: 100%;
+    height: 64px;
+  }
+}
+
+.adaptive {
+  .CabinetWrapper {
+    min-width: auto;
+  }
+}

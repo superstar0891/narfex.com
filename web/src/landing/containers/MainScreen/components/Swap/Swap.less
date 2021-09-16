@@ -1,0 +1,228 @@
+@import "../../../../../vars";
+
+.Swap {
+  background: var(--white);
+  padding: 160px 0;
+
+  .Swap__content {
+    max-width: 928px;
+
+    h2 {
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 48px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 32px;
+      max-width: 736px;
+    }
+
+    @media (max-width: @mobile-width) {
+      text-align: center;
+
+      h2 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .Swap__form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+
+    @media (max-width: @mobile-width) {
+      flex-direction: column;
+    }
+
+    .Swap__form__card {
+      flex: 1;
+      text-align: left;
+      box-sizing: border-box;
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px solid var(--cloudy);
+      background-color: var(--alice-blue);
+
+      @media (max-width: @mobile-width) {
+        width: 100%;
+        padding: 16px;
+      }
+
+      .Swap__form__card__label {
+        color: var(--dark-gray);
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 20px;
+      }
+
+      .Swap__form__card__rate {
+        color: var(--dark-gray);
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 32px;
+        text-align: center;
+      }
+
+      .Input {
+        --input-height: 64px;
+        margin-top: 20px;
+
+        .Input__wrapper {
+          background: var(--white);
+          box-shadow: none;
+          border-radius: 16px;
+          border-color: var(--cloudy);
+          margin-bottom: 20px;
+        }
+
+        .Input__input {
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 32px;
+          padding: 16px 24px;
+        }
+
+        .Input__indicator {
+          color: var(--gray);
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 32px;
+        }
+      }
+
+      .Swap__select {
+        position: relative;
+        margin-top: 20px;
+        z-index: 2;
+
+        .Select__option__label {
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 32px;
+        }
+
+        .Select__option__icon {
+          margin-right: 12px;
+        }
+      }
+    }
+
+    .Button {
+      position: absolute;
+      margin: 0 auto;
+      width: 145px;
+      left: 0;
+      right: 0;
+      bottom: -32px;
+
+      @media (max-width: @mobile-width) {
+        width: 100%;
+        bottom: -80px;
+      }
+    }
+
+    .Swap__switchButton {
+      position: relative;
+      display: flex;
+      content: '';
+      height: 64px;
+      width: 64px;
+      border-radius: 32px;
+      background: var(--white);
+      margin: -16px;
+      border: 1px solid var(--cloudy);
+      box-sizing: border-box;
+      color: var(--white);
+      z-index: 1;
+
+      &:after {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        content: "";
+        height: 24px;
+        width: 24px;
+        display: block;
+        filter: invert(1);
+        background: url("../../../../../asset/24px/loading.svg");
+        animation: Button__loader_anim 1s infinite linear;
+        z-index: 1;
+        opacity: 0;
+        transform: scale(.3);
+        transition: .3s ease;
+      }
+
+
+      &:before {
+        content: '';
+        position: absolute;
+        margin: 0 auto;
+        top: -1px;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        width: 32px;
+        background: var(--white);
+        z-index: -1;
+
+        @media (max-width: @mobile-width) {
+          transform: rotate(90deg);
+        }
+      }
+
+      .isvg {
+        display: flex;
+        height: 48px;
+        width: 48px;
+        border-radius: 24px;
+        margin: auto;
+        background: var(--blue-gradient);
+        cursor: pointer;
+
+        svg {
+          transition: .3s ease;
+          width: 24px;
+          height: 24px;
+          margin: auto;
+          display: block;
+        }
+      }
+
+      &.loading {
+        pointer-events: none;
+
+        svg {
+          opacity: 0;
+          transform: scale(.3);
+        }
+
+        &::after {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      &:hover {
+        .isvg {
+          background: var(--dark-blue);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+#root .AdminTable {
+  .Table__filters {
+    margin: 8px -4px;
+  }
+
+  .Table__controls {
+    display: flex;
+
+    .Table__filters {
+      margin-right: auto;
+    }
+  }
+
+  .Table__search {
+    background: var(--cloudy);
+    padding: 16px 8px;
+    display: flex;
+    margin: 16px -16px 24px;
+
+    & > * {
+      margin: 0 8px;
+
+      .Input__wrapper {
+        margin: 0;
+      }
+    }
+
+    .Item--input,
+    .Item--select,
+    .Item--dropdown {
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.SendCoinsModal {
+  margin-top: 20px;
+  box-sizing: border-box;
+  max-width: 472px;
+}
+
+.SendCoinsModal__wrapper .LoadingStatus__wrap {
+  width: 300px;
+}
+
+.SendCoinsModal__wallet {
+  display: flex;
+  align-items: center;
+
+  .Dropdown {
+    flex: 1;
+  }
+
+  .CircleIcon {
+    margin-right: 16px;
+  }
+}
+
+.SendCoinsModal__wallet__icon {
+  flex: 0 0 auto;
+  width: 72px;
+  height: 72px;
+  margin-left: -16px;
+  background: no-repeat center/contain;
+}
+
+.SendCoinsModal__row {
+  margin-top: 28px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.SendCoinsModal__amount {
+  display: flex;
+  align-items: flex-start;
+
+  & > .Input,
+  .Tooltip__wrapper {
+    flex: 1;
+  }
+
+  .Button {
+    flex: 0 0 auto;
+  }
+
+  & > .Input,
+  .Tooltip__wrapper,
+  .Button {
+    margin-left: 16px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.SendCoinsModal__submit_wrap {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cabinet_sendCoinsModal__noFee {
+  color: var(--green);
+}
+
+.adaptive {
+  .SendCoinsModal__block {
+    max-width: 100%;
+  }
+
+  .SendCoinsModal__wrapper .LoadingStatus__wrap {
+    width: 100%;
+  }
+
+  .Modal .SendCoinsModal {
+    &__amount {
+      width: calc(100% - 80px);
+      position: relative;
+      flex-direction: column;
+
+      .Input {
+        margin: 0;
+        margin-bottom: 24px;
+      }
+
+      .Tooltip__wrapper {
+        width: 100%;
+        margin-left: 0;
+
+        .Input {
+          margin-bottom: 0;
+        }
+      }
+
+      .Button {
+        position: absolute;
+        top: 0;
+        right: -80px;
+        width: 64px;
+      }
+    }
+  }
+}
+

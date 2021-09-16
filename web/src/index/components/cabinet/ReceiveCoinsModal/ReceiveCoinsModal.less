@@ -1,0 +1,118 @@
+@import '../../../../vars';
+
+.ReceiveCoinsModal {
+  --padding: 40px;
+
+  .Modal__box {
+    max-width: 648px;
+    padding: var(--padding) !important;
+    overflow: hidden;
+  }
+}
+
+.ReceiveCoinsModal__layout {
+  display: flex;
+  margin: 16px 0;
+  align-items: center;
+}
+
+.ReceiveCoinsModal__qrCode {
+  align-self: self-start;
+  display: flex;
+  width: 192px;
+  height: 192px;
+  background: white;
+  flex: 0 0 auto;
+  margin-right: 24px;
+
+  canvas {
+    margin: auto;
+    display: block;
+  }
+}
+
+.ReceiveCoinsModal__clipboard {
+  color: var(--primary-blue);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.ReceiveCoinsModal__content {
+
+}
+
+.ReceiveCoinsModal__banner {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--extra-light-gray);
+  background: var(--alice-blue);
+  margin: calc(var(--padding) * -1);
+  padding: 24px;
+  margin-top: var(--padding);
+}
+
+.ReceiveCoinsModal__banner__icon {
+  width: 160px;
+  height: 160px;
+  flex: 0 0 auto;
+  background-image: url('../../../../asset/illustrations/credit-card.svg');
+  background-size: contain;
+  background-position: center;
+}
+
+
+.ReceiveCoinsModal__banner__text {
+  margin: 0 24px;
+
+  h4 {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
+.ReceiveCoinsModal__banner .Button {
+  min-width: 104px;
+  margin-right: 16px;
+}
+
+@media (max-width: @mobile-width) {
+  .ReceiveCoinsModal {
+    --padding: 16px;
+  }
+
+  .ReceiveCoinsModal__qrCode {
+    margin: 0 auto;
+  }
+
+  .ReceiveCoinsModal__layout {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .ReceiveCoinsModal__content {
+    margin-top: 24px;
+  }
+
+  .ReceiveCoinsModal__banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .ReceiveCoinsModal__banner__text {
+    margin: 24px 0;
+  }
+
+  .ReceiveCoinsModal__banner .Button {
+    margin: 0;
+  }
+}

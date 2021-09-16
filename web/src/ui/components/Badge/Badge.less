@@ -1,0 +1,31 @@
+.Badge {
+  position: relative;
+  width: fit-content;
+  display: inline-block;
+
+  .Badge__count {
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 8px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--white);
+    background: var(--text-red);
+    position: absolute;
+    height: 12px;
+    min-width: 12px;
+    padding: 0 4px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    top: 1px;
+    left: 100%;
+    transform: translate(-12px, 0%);
+
+    &:empty {
+      display: none;
+    }
+  }
+}

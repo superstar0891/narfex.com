@@ -1,0 +1,99 @@
+cron:
+- description: "daily investment profits"
+  url: /api/v1/cron?job=profit&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: default
+  schedule: every day 00:00
+- description: "address pool"
+  url: /api/v1/cron?job=address_pool&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: default
+  schedule: every 30 minutes
+- description: "withdrawal loop"
+  url: /platform/cron_jobs/withdrawal_loop.php
+  target: legacy
+  schedule: every 1 minutes
+- description: "eth transfers"
+  url: /api/v1/cron?job=eth_transfer&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: default
+  schedule: every 2 hours
+- description: "xendit wallets"
+  url: /api/v1/cron?job=xendit_wallets_check&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: default
+  schedule: every 15 minutes
+- description: "fiat withdrawals"
+  url: /api/v1/cron?job=fiat_withdrawals&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: default
+  schedule: every 5 minutes
+- description: "getting rates"
+  url: /api/v1/cron?job=getting_rates&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: default
+  schedule: every 2 minutes
+- description: "hedging"
+  url: /api/v1/cron?job=hedging&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: default
+  schedule: every 5 minutes
+- description: "update bank cards"
+  url: /api/v1/cron?job=bank_cards&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: default
+  schedule: every 1 minutes
+- description: "update merchant cards"
+  url: /api/v1/cron?job=merchant_cards&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: default
+  schedule: every 1 minutes
+- description: "update partner rating"
+  url: /api/v1/cron?job=update_partner_rating&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: default
+  schedule: every 15 minutes
+#- description: "saving daily"
+#  url: /api/v1/cron?job=saving_daily&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+#  target: default
+#  schedule: every day 10:00
+#- description: "saving"
+#  url: /api/v1/cron?job=saving&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+#  target: default
+#  schedule: every day 11:00
+
+# Findiri
+- description: "daily investment profits"
+  url: /api/v1/cron?job=profit&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: api
+  schedule: every day 00:00
+- description: "address pool"
+  url: /api/v1/cron?job=address_pool&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: api
+  schedule: every 30 minutes
+- description: "eth transfers"
+  url: /api/v1/cron?job=eth_transfer&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: api
+  schedule: every 2 hours
+- description: "xendit wallets"
+  url: /api/v1/cron?job=xendit_wallets_check&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: api
+  schedule: every 15 minutes
+- description: "fiat withdrawals"
+  url: /api/v1/cron?job=fiat_withdrawals&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: api
+  schedule: every 5 minutes
+- description: "getting rates"
+  url: /api/v1/cron?job=getting_rates&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: api
+  schedule: every 2 minutes
+- description: "hedging"
+  url: /api/v1/cron?job=hedging&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: api
+  schedule: every 5 minutes
+- description: "update bank cards"
+  url: /api/v1/cron?job=bank_cards&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: api
+  schedule: every 1 minutes
+- description: "update merchant cards"
+  url: /api/v1/cron?job=merchant_cards&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: api
+  schedule: every 1 minutes
+- description: "parsing the queue"
+  url: /api/v1/cron?job=queue_cron_job&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: api
+  schedule: every 1 minutes
+- description: "update merchant card available amount"
+  url: /api/v1/cron?job=update_available_card_amount&secret=XpbHU5rfYgzLG8DwXexjkhSA58LMtJvBnaAN2gYLXFn
+  target: api
+    schedule: every day 00:30

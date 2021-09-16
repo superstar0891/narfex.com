@@ -1,0 +1,41 @@
+@import '../../../../vars';
+
+.PageContainer {
+  --site-bar-width: 280px;
+  --content-width: 648px;
+
+  display: flex;
+  width: calc(var(--content-width) + var(--site-bar-width) + var(--gap-size));
+  margin: var(--gap-size) auto;
+}
+
+.PageContainer__content {
+  width: var(--content-width);
+}
+
+.PageContainer__sideBar {
+  margin-right: var(--gap-size);
+  width: var(--site-bar-width);
+  flex: 0 0 auto;
+}
+
+@media (min-width: @mobile-width) {
+  .PageContainer.invert {
+    flex-direction: row-reverse;
+
+    .PageContainer__sideBar {
+      margin-right: 0;
+      margin-left: var(--gap-size);
+    }
+  }
+}
+@media (max-width: @mobile-width) {
+  .PageContainer {
+    --site-bar-width: 100%;
+    --content-width: 100%;
+
+    width: 100%;
+
+    flex-direction: column;
+  }
+}

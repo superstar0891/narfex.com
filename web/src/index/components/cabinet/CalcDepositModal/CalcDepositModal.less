@@ -1,0 +1,152 @@
+.CalcDepositModal {
+  width: 568px;
+  margin-top: 12px;
+}
+
+.CalcDepositModal__icon {
+  position: absolute;
+  top: 32px;
+  left: -16px;
+}
+
+.CalcDepositModal__row {
+  position: relative;
+  display: flex;
+  margin: 24px -12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .CalcDepositModal__column {
+    display: flex;
+    flex: 1;
+    margin: 0 12px;
+
+    .Dropdown {
+      flex: 1;
+    }
+
+    .Input {
+      flex: 1;
+    }
+
+    .Button.outline {
+      margin-left: 12px;
+      padding: 0 16px;
+    }
+  }
+}
+
+.CalcDepositModal__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .CalcDepositModal__description__label {
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 8px;
+    color: var(--text-black);
+  }
+
+  .CalcDepositModal__description__value {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+.CalcDepositModal__delimiter {
+  height: 1px;
+  background: black;
+  opacity: 0.15;
+  margin: 40px 0;
+}
+
+.CalcDepositModal__drop_button {
+  position: absolute;
+  width: 48px;
+  right: 0;
+
+  .Button {
+    width: 100%;
+    padding: 0;
+
+    .Button__label {
+      line-height: 0;
+    }
+
+    &:hover {
+      color: var(--red);
+    }
+  }
+}
+
+.CalcDepositModal__day {
+  margin-bottom: 56px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.CalcDepositModal__result {
+  .Button {
+    flex: 1;
+  }
+}
+
+.adaptive {
+  .CalcDepositModal {
+    width: 100%;
+  }
+  .CalcDepositModal__row {
+    flex-direction: column;
+    margin: 0;
+  }
+  .CalcDepositModal__column {
+    margin: 12px;
+  }
+
+  .CalcDepositModal__drop_button {
+    width: 64px;
+  }
+
+  .CalcDepositModal__day {
+    .CalcDepositModal__row:first-child {
+      .Input {
+        width: calc(100% - 76px);
+      }
+    }
+  }
+
+  .CalcDepositModal__column.amount {
+    .Button {
+      width: 64px;
+      flex: 0 0 auto;
+    }
+  }
+
+  .CalcDepositModal__column:empty {
+    display: none;
+  }
+
+  .CalcDepositModal__delimiter {
+    margin: 27px -16px;
+  }
+
+  .CalcDepositModal__result {
+    flex-direction: column-reverse;
+  }
+
+  .CalcDepositModal__icon {
+    left: 0;
+    right: 0;
+    top: -16px;
+    margin: 0 auto;
+  }
+
+  .CalcDepositModal__wrapper {
+    padding-top: 80px;
+  }
+}

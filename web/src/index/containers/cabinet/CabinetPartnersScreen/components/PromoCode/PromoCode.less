@@ -1,0 +1,49 @@
+@import '../../../../../../vars';
+
+.PartnerPromoCode {
+  margin-bottom: var(--gap-size);
+
+  .ContentBox__content {
+    padding: 40px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.PartnerPromoCode__header {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.PartnerPromoCode__code {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: var(--primary-blue);
+  margin: 16px 0;
+
+  .Clipboard__icon {
+    align-self: center;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .PartnerPromoCode {
+    .ContentBox__content {
+      padding: 16px;
+    }
+  }
+
+  .PartnerPromoCode__code {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+
+    margin: 8px 0;
+  }
+}

@@ -1,0 +1,185 @@
+.TradeForm {
+  .ContentBox__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .TradeForm__tradeTypeButtons {
+    .Button {
+      margin-right: 8px;
+    }
+  }
+
+  .TradeForm__forms {
+    align-self: center;
+    display: flex;
+    margin: 16px -16px;
+    margin-bottom: 0;
+    max-width: 1024px;
+  }
+
+  .TradeForm__form {
+    flex: 1;
+    margin: 0 16px;
+
+    .TradeForm__form__header {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .TradeForm__form__balance {
+      font-size: 11px;
+      line-height: 16px;
+      margin-left: auto;
+
+      .TradeForm__form__fee__label {
+        color: var(--gray);
+        margin-right: 0.5em;
+      }
+    }
+
+    .TradeForm__form__title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .TradeForm__form__row {
+      display: flex;
+      margin: 16px -8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .TradeForm__form__coll {
+      flex: 1;
+      margin: 0 8px;
+
+      .Button {
+        width: 100%;
+      }
+
+      .Input[disabled] {
+        cursor: not-allowed;
+        opacity: 0.8;
+
+        & + .Input__indicator {
+          pointer-events: none;
+          opacity: 0.8;
+        }
+      }
+
+      &.fee {
+        display: flex;
+      }
+    }
+    .TradeForm__form__fee {
+      font-size: 11px;
+      line-height: 16px;
+      color: var(--gray);
+      margin-left: auto;
+      align-self: center;
+
+      span {
+        color: var(--almost-black);
+      }
+    }
+  }
+
+  .TradeForm__placeholder {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    transition: opacity.2s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    .TradeForm__placeholder__wrapper {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .TradeForm__placeholder__or {
+      display: block;
+      margin: 0 24px;
+      font-size: 13px;
+      line-height: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .TradeForm {
+    .ContentBox__content {
+      flex-direction: row;
+
+      .TradeForm__tradeTypeButtons {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        min-width: 80px;
+
+        .Button {
+          margin: 4px 0;
+        }
+      }
+
+      .TradeForm__forms {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.adaptive {
+  .TradeForm {
+    margin: var(--gap-size) 0;
+  }
+  .TradeForm__forms {
+    width: 100%;
+    flex-direction: column;
+
+    .TradeForm__form {
+      margin: 0;
+    }
+
+    .TradeForm__form__row {
+      &:not(:last-child) {
+        flex-direction: column;
+        margin: 0;
+
+        .TradeForm__form__coll {
+          margin: 8px 0;
+        }
+      }
+
+      &:last-child {
+        margin-top: 8px;
+        margin-bottom: 0;
+      }
+    }
+
+    .TradeForm__form:last-child {
+      margin-top: 23px;
+    }
+  }
+  .TradeForm__placeholder {
+    opacity: 1;
+  }
+}

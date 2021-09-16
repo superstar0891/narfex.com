@@ -1,0 +1,31 @@
+.InfoRow__group {
+  width: 100%;
+  border-spacing: 0 24px;
+}
+
+.InfoRow {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  padding-top: 24px;
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.InfoRow__label {
+  white-space: nowrap;
+  color: var(--text-black);
+  text-align: right;
+}
+
+.InfoRow__value {
+  color: var(--black);
+  padding-left: 16px;
+  width: 100%;
+
+  .InfoRow.left & {
+    width: 100%;
+  }
+}

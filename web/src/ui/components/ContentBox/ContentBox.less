@@ -1,0 +1,20 @@
+@import '../../../vars';
+
+.ContentBox {
+  position: relative;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 1px solid var(--extra-light-gray);
+  background: var(--primary-background);
+
+  @media (max-width: @mobile-width) {
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 0 0 1px var(--extra-light-gray);
+  }
+}
+
+.ContentBox__content {
+  border-radius: inherit;
+  padding: 16px;
+}

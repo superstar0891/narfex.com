@@ -1,0 +1,77 @@
+.Toast {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: 320px;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  background: var(--background);
+  animation: toast-show.15s ease-out;
+  transition: opacity 2s ease;
+  pointer-events: all;
+  box-shadow: var(--main-shadow);
+  color: var(--gray);
+
+  &:before {
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: "";
+    display: block;
+    width: inherit;
+    height: 100%;
+    border-radius: inherit;
+    box-shadow: 0 6px 24px var(--background), 0 0 2px var(--background);
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &.success {
+    --background: var(--text-green);
+    color: var(--white);
+  }
+
+  &.warning {
+    --background: var(--text-yellow);
+    color: var(--white);
+  }
+
+  &.fail,
+  &.error {
+    --background: var(--text-red);
+    color: var(--white);
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    line-height: 0;
+    margin-right: 16px;
+  }
+
+  &__close {
+    cursor: pointer;
+    line-height: 0;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+
+  &.hidden {
+    opacity: 0;
+    //margin-top: -70px;
+  }
+}
+
+@keyframes toast-show {
+  from {
+    transform: translate(400px, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}

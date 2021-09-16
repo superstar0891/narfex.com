@@ -1,0 +1,38 @@
+.HamburgerButton {
+  position: relative;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+
+  .HamburgerButton__button {
+    position: absolute;
+    display: block;
+    height: inherit;
+    width: inherit;
+    transition: opacity.3s ease;
+    top: 0;
+    left: 0;
+
+    svg {
+      display: block;
+    }
+
+    &:last-child {
+      opacity: 0;
+    }
+  }
+
+  &.active {
+    .HamburgerButton__button {
+      &:first-child {
+        opacity: 0;
+      }
+      &:last-child {
+        opacity: 1;
+      }
+    }
+  }
+
+
+
+}

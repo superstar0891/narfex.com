@@ -1,0 +1,85 @@
+@import "../../vars";
+
+.Message {
+  border-radius: @border-radius;
+  background: var(--primary-blue-opacity);
+  padding: 16px;
+  font-family: @font-family;
+  color: var(--black);
+  font-size: 15px;
+  line-height: 20px;
+  margin: 16px 0;
+
+  .Message__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &.error {
+    background: var(--red-opacity);
+  }
+
+  &.warning {
+    background: var(--yellow-opacity);
+  }
+
+  &.success {
+    background: var(--green-opacity);
+  }
+
+  &.alert {
+    padding: 18px 25px;
+    color: var(--uikit-message-default-border-color);
+
+    &.error {
+      color: var(--uikit-message-error-border-color);
+    }
+
+    &.warning {
+      color: var(--uikit-message-warning-border-color);
+    }
+
+    &.success {
+      color: var(--uikit-message-success-border-color);
+    }
+  }
+}
+
+.Message__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+.Message__label {
+  flex: 1;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 21px;
+
+  .Message.alert & {
+    font-weight: 600;
+  }
+}
+
+.Message__icon {
+  flex: 0 0 auto;
+  width: 47px;
+  height: 47px;
+  margin-right: 12px;
+  background: red;
+}
+
+.Message__close {
+  width: 24px;
+  height: 24px;
+  background: red;
+  flex: 0 0 auto;
+  cursor: pointer;
+  transition: opacity 150ms ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

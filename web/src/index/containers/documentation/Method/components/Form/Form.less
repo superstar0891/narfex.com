@@ -1,0 +1,60 @@
+.MethodForm {
+  .ContentBox__content {
+    padding: 40px;
+    overflow: hidden;
+
+    form {
+      .MethodForm__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 24px;
+        margin-bottom: 32px;
+
+        &.headers {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .File {
+        width: 100%;
+      }
+
+      .Button {
+        margin-top: auto;
+      }
+    }
+  }
+
+  .MethodForm__field {
+    display: block;
+
+    .MethodForm__field__label {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      margin-bottom: 8px;
+      margin-left: 16px;
+    }
+  }
+  .MethodForm__response {
+    margin: 40px -40px -40px;
+    padding: 24px 40px;
+
+    .MethodForm__response__editor {
+      font-family: monospace;
+      color: #333;
+      font-size: 11px;
+      line-height: 16px;
+      text-align: left;
+      display: block;
+      width: 100%;
+      margin: 0;
+      height: 100px;
+      overflow: visible;
+      resize: vertical;
+      background: transparent;
+      border: none;
+      outline: none;
+    }
+  }
+}

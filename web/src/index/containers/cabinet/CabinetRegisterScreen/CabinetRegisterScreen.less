@@ -1,0 +1,155 @@
+.CabinetRegister {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+
+  .Input__indicator {
+    color: var(--green);
+  }
+
+  &__description {
+    margin-top: -24px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--text-black);
+
+    &.error {
+      color: var(--text-red);
+    }
+  }
+
+  &__PhoneInput {
+    margin-bottom: 40px;
+
+    &_searchClass {
+      padding: 0 !important;
+      &-box {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        border-width: 0 !important;
+        -webkit-border-radius: 0 !important;
+        -moz-border-radius: 0 !important;
+        border-radius: 0 !important;
+        padding: 10px !important;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.33) !important;
+      }
+    }
+
+    &_dropdownClass {
+      margin: 10px 0 10px -5px !important;
+      width: 343px !important;
+      border-radius: 8px !important;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08), 0 0 4px rgba(0, 0, 0, 0.05) !important;
+      max-height: 250px !important;
+    }
+
+    &_buttonClass {
+      background-color: rgba(0, 0, 0, 0) !important;
+      border: none !important;
+      padding-left: 6px !important;
+    }
+
+    &_inputClass {
+      height: 48px !important;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08), 0 0 4px rgba(0, 0, 0, 0.05);
+      background: var(--primary-background) !important;
+      border-radius: 8px !important;
+      font-size: 15px !important;
+      line-height: 20px !important;
+      box-sizing: border-box !important;
+      border: 2px solid transparent !important;
+      outline: none !important;
+      padding: 14px 16px;
+      transition: all 150ms ease-in-out;
+      width: 100% !important;
+
+      &:focus {
+        border-color: var(--primary-orange) !important;
+      }
+    }
+
+    .error &_inputClass {
+      border-color: #ff4545 !important;
+      box-shadow: 0 0 8px 0px rgba(132, 1, 1, 0.45) !important;
+    }
+  }
+
+  &__content {
+    .ContentBox__content {
+      padding: 40px;
+      width: 424px;
+      box-sizing: border-box;
+    }
+
+    &__send_code_button {
+      margin-top: -15px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__timer,
+    &__resend_code_button {
+      color: var(--text-black);
+      margin: 0 24px;
+    }
+
+    &__resend_code_button {
+      cursor: pointer;
+    }
+
+    &__title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 80px 0 24px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .Input,
+    .RegistrationInputTooltip {
+      margin-bottom: 40px;
+
+      .Input {
+        margin-bottom: 0;
+      }
+    }
+
+    &__submit_wrapper {
+      text-align: center;
+      margin-top: 80px;
+    }
+  }
+}
+
+.adaptive {
+  .CabinetRegister {
+    padding: 16px 0;
+
+    &__content {
+      width: 100%;
+
+      .ContentBox__content {
+        width: 100%;
+        padding: 24px 16px;
+      }
+
+      &__submit_wrapper {
+        .Button {
+          width: 100%;
+        }
+      }
+    }
+    &__PhoneInput_dropdownClass {
+      width: calc(100vw - 32px) !important;
+    }
+  }
+}
+

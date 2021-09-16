@@ -1,0 +1,39 @@
+.StaticContentModal {
+  .Modal__box {
+    max-width: 800px;
+  }
+
+  .StaticContentModal__opener {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .StaticContentModal__content__wrapper {
+    min-width: 320px;
+    min-height: 180px;
+    max-width: 560px;
+
+    .StaticContentModal__title {
+      padding: 20px 10px;
+    }
+
+    .StaticContentModal__content {
+      padding: 10px;
+    }
+
+    .Button {
+      margin: 25px 10px 15px;
+    }
+  }
+}
+
+.adaptive {
+  .StaticContentModal {
+    .StaticContentModal__content__wrapper {
+      height: initial;
+      min-width: 0;
+      min-height: 0;
+    }
+  }
+}

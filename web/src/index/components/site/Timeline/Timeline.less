@@ -1,0 +1,118 @@
+.Timeline {
+  display: flex;
+  flex-direction: column;
+
+  .left {
+    align-self: flex-start;
+    text-align: right;
+
+    @media (min-width: 1400px) {
+      margin-left: 5%;
+    }
+  }
+
+  .right {
+    align-self: flex-end;
+    text-align: left;
+
+    @media (min-width: 1400px) {
+      margin-right: 5%;
+    }
+  }
+
+  .Timeline__circle {
+    width: 25px;
+    height: 25px;
+    border: 7px solid var(--alice-blue);
+    margin: 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(135.68deg, #ffcc5c -5.03%, #ff9e65 91.38%);
+    position: absolute;
+    left: 48.69%;
+  }
+
+  .Timeline__event {
+    padding: 20px;
+    width: 400px;
+    background: #ffffff;
+    box-shadow: 1px 16px 26px #f3f1f0;
+    border-radius: 10px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 60px;
+    }
+  }
+
+  .Timeline__event__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 56px;
+    text-align: right;
+    letter-spacing: 0.599999px;
+    color: #ffa464;
+  }
+
+  .Timeline__event__caption {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 34px;
+    text-align: justify;
+    letter-spacing: 0.444444px;
+    margin-top: 15px;
+    color: var(--text-black);
+  }
+
+  .Timeline__line {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 4%;
+    background: linear-gradient(90deg, #658bf5 0.12%, #8db0ff 98.33%);
+    width: 5px;
+    height: 86%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .Timeline {
+    .Timeline__event {
+      margin-top: 140px;
+      margin-bottom: 100px;
+    }
+
+    .right,
+    .left {
+      align-self: center;
+    }
+
+    .Timeline__circle {
+      left: 48%;
+      transform: translate(3px, -150px);
+    }
+
+    .Timeline__line {
+      top: 2%;
+      height: 90%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .Timeline {
+    .Timeline__circle {
+      transform: translate(-6px, -150px);
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .Timeline {
+    .Timeline__event {
+      width: 300px;
+    }
+
+    .Timeline__circle {
+      transform: translate(-9px, -132px);
+    }
+  }
+}

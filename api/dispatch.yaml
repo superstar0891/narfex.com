@@ -1,0 +1,25 @@
+dispatch:
+#  - url: "api.narfex.com/*"
+#    service: default
+#  - url: "narfex.com/*"
+#    service: web
+#  - url: "www.narfex.com/*"
+#    service: web
+#  - url: "static.narfex.com/*"
+#    service: default
+#  - url: "api.bitcoinov.net/*"
+#    service: api
+#  - url: "www.bitcoinov.net/*"
+#    service: bitcoinovnet
+#  - url: "bitcoinov.net/*"
+#    service: bitcoinovnet
+#  - url: "api.findiri.com/*"
+#    service: api
+#  - url: "findiri.com/*"
+#    service: frontend
+#  - url: "www.findiri.com/*"
+#    service: frontend
+#  - url: "static.findiri.com/*"
+#    service: api
+#  - url: "static.bitcoinov.net/*"
+#    service: api

@@ -1,0 +1,111 @@
+@import '../../../../../../vars';
+
+.CommonHeader {
+  margin-bottom: var(--gap-size);
+
+  .ContentBox__content {
+    padding: 40px;
+    display: flex;
+  }
+}
+
+.CommonHeader__content {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.CommonHeader__amount {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.CommonHeader__label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.CommonHeader__pie {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 120px;
+}
+
+.CommonHeader__currencyList {
+  margin-top: 24px;
+  margin-bottom: -16px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.CommonHeader__currencyList li {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+  font-size: 13px;
+  line-height: 16px;
+  margin-bottom: 16px;
+}
+
+.CommonHeader__currencyList__coin {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+  background: var(--gray);
+  background-size: 100%;
+}
+
+.CommonHeader__currencyList__percent {
+  margin-right: 4px;
+}
+
+.CommonHeader__currencyList__currency {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.CommonHeader__adaptiveBlock {
+  display: flex;
+  margin-top: 24px;
+}
+
+@media (max-width: @mobile-width) {
+  .CommonHeader__label {
+    text-align: center;
+  }
+
+  .CommonHeader__amount {
+    text-align: center;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .CommonHeader {
+    .ContentBox__content {
+      flex-direction: column;
+      padding: 24px 16px;
+    }
+  }
+
+  .CommonHeader__currencyList {
+    flex: 1;
+    margin: 0;
+    flex-direction: column;
+
+    li {
+      margin-right: 0;
+    }
+  }
+
+  .CommonHeader__pie {
+    margin-right: 16px;
+  }
+}

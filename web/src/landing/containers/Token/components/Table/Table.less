@@ -1,0 +1,86 @@
+@import "../../../../../vars";
+
+.TokenTable {
+  background: var(--alice-blue);
+  padding-bottom: 1px;
+}
+
+.TokenTable__content {
+  text-align: center;
+  margin: 200px auto !important;
+
+  @media (max-width: @mobile-width) {
+    margin: 100px auto !important;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+
+    @media (max-width: @mobile-width) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 32px;
+    margin: 40px 0;
+  }
+
+  .ButtonWrapper {
+    margin-top: 40px;
+  }
+}
+
+.TokenTable__table {
+  border-spacing: 0;
+  border-radius: 16px;
+  text-align: left;
+  font-size: 18px;
+  line-height: 32px;
+
+  width: 544px;
+  margin: 40px auto;
+
+  @media (max-width: @mobile-width) {
+    width: calc(100% + 16px * 2);
+    margin: 32px -16px;
+  }
+
+
+  tr {
+    &:nth-child(2n-1){
+      td, th {
+        background: var(--white);
+
+        @media (min-width: @mobile-width) {
+          &:first-child {
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+          }
+
+          &:last-child {
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  td, th {
+    padding: 16px 24px;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  small {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

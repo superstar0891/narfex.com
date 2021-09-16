@@ -1,0 +1,41 @@
+.Select {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+
+  .Select__option {
+    display: flex;
+    align-items: center;
+
+    .Select__option__icon {
+      margin-right: 8px;
+    }
+
+    .Select__option__label {
+      flex: 1;
+    }
+  }
+
+  .Select__remove {
+    color: var(--gray);
+    margin-left: -8px;
+
+    svg {
+      display: block;
+    }
+  }
+
+  .Select__arrow {
+    color: var(--gray);
+    transition: transform.3s ease;
+
+    &.open {
+      transform: rotate(180deg);
+    }
+
+    svg {
+      display: block;
+    }
+  }
+}

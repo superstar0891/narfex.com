@@ -1,0 +1,101 @@
+.ChangeNumberModal__input_padding {
+  padding-top: 30px;
+}
+.ChangeNumberModal__PhoneInput_searchClass {
+  padding: 0 !important;
+  .ChangeNumberModal__PhoneInput_searchClass-box {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    border-width: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    padding: 10px !important;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.33) !important;
+  }
+}
+
+.ChangeNumberModal__PhoneInput_dropdownClass {
+  margin: 10px 0 10px -5px !important;
+  width: 343px !important;
+  border-radius: 8px !important;
+  box-shadow: var(--main-shadow) !important;
+  max-height: 250px !important;
+}
+
+.ChangeNumberModal__PhoneInput_buttonClass {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border: none !important;
+  padding-left: 6px !important;
+}
+
+.ChangeNumberModal__PhoneInput_inputClass {
+  height: 48px !important;
+  box-shadow: var(--main-shadow);
+  background: var(--primary-background) !important;
+  border-radius: 8px !important;
+  font-size: 15px !important;
+  line-height: 20px !important;
+  box-sizing: border-box !important;
+  border: 2px solid rgba(0, 0, 0, 0) !important;
+  outline: none !important;
+  padding: 14px 16px;
+  transition: all 150ms ease-in-out;
+  width: 100% !important;
+
+  &:focus {
+    border-color: var(--primary-orange) !important;
+  }
+}
+
+.ChangeNumberModal__input_wrapper {
+  position: relative;
+  margin-bottom: 40px;
+
+  .react-tel-input .flag {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+  }
+
+  .react-tel-input .country-list .divider {
+    border-bottom: 1px solid rgba(204, 204, 204, 0.33) !important;
+  }
+
+  .react-tel-input .country-list .country.highlight {
+    background-color: rgba(255, 152, 0, 0.06) !important;
+  }
+
+  .Input {
+    box-shadow: var(--main-shadow);
+    margin: 40px 0 0 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    border: 1px solid #f1f1f1;
+    -webkit-appearance: none;
+
+    &::placeholder {
+      color: var(--text-black);
+    }
+  }
+}
+
+.ChangeNumberModal__submit_wrapper {
+  width: 100%;
+  display: flex;
+  padding-top: 40px;
+
+  .Button {
+    margin: auto;
+  }
+}
+
+.adaptive {
+  .ChangeNumberModal {
+    &__PhoneInput_dropdownClass {
+      width: calc(100vw - 32px) !important;
+    }
+  }
+}

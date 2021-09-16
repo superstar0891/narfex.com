@@ -1,0 +1,65 @@
+.ProfileSidebar {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+
+  .ProfileUser {
+    padding: 30px 0 15px;
+  }
+
+  @supports (position: sticky) {
+    position: sticky;
+    overflow-y: auto;
+    height: calc(100vh - 56px);
+    top: 56px;
+    align-self: flex-start;
+  }
+
+  .ProfileSidebar__top {
+    margin-bottom: 24px;
+  }
+
+  .ProfileSidebar__menu {
+    .ProfileSidebar__menu__item {
+      display: flex;
+      align-items: center;
+      padding: 16px 24px;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 16px;
+      cursor: pointer;
+      transition: color 100ms ease-in-out;
+      text-decoration: none !important;
+      color: var(--text-black);
+      user-select: none;
+
+      svg {
+        flex: 0 0 auto;
+        margin-right: 8px;
+        width: 24px;
+        height: 24px;
+      }
+
+      &:hover {
+        color: var(--almost-black);
+      }
+
+      &.active {
+        color: var(--black);
+      }
+    }
+
+    .ProfileSidebar__menu__item .active {
+      background-color: #000;
+    }
+
+    .ProfileSidebar__menu__item_passive {
+      color: var(--text-black);
+    }
+  }
+
+  .ProfileSidebar__footer {
+    margin-top: auto;
+  }
+}

@@ -1,0 +1,89 @@
+.LangsScreen {
+  .LangsScreen__table {
+    position: relative;
+    margin: -16px;
+  }
+
+  .LangsScreen__loader {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,.75);
+    z-index: 70;
+
+    .LoadingStatus {
+      position: sticky;
+      top: 300px;
+    }
+  }
+
+  & > .Block {
+    position: relative;
+  }
+
+  .TableMain {
+    width: 100% !important;
+    margin: 0 !important;
+    box-shadow: none;
+    min-height: 600px;
+
+    tr > td:nth-child(3) {
+      min-width: 400px;
+      width: 45%;
+    }
+
+    .actionsColumn {
+      width: 80px;
+    }
+
+    .Button {
+      width: 80px;
+    }
+
+    .Input__wrapper {
+      background: var(--white);
+      border-color: var(--light-gray);
+    }
+
+    .Input__input {
+      padding: 11px 16px;
+    }
+
+    .Table__td__cont {
+      min-width: 0 !important;
+    }
+  }
+
+  .Table__search {
+    .Dropdown {
+      width: 300px;
+    }
+    .SwitchTabs {
+      width: 600px;
+    }
+
+    &.loading {
+      pointer-events: none;
+
+      & > * {
+        opacity: .5;
+      }
+    }
+  }
+
+  .LangScreen__footer {
+    z-index: 61;
+    position: sticky;
+    background: var(--primary-background);
+    border-top: 1px solid var(--light-gray);
+    padding: 16px;
+    box-sizing: border-box;
+    bottom: 0;
+
+    .Button {
+      margin-right: 16px;
+    }
+  }
+}

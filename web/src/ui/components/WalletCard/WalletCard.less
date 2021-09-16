@@ -1,0 +1,84 @@
+.WalletCard {
+  position: relative;
+  border-radius: 8px;
+  height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-weight: 600;
+  padding: 0 32px;
+  box-sizing: border-box;
+  background: currentColor;
+
+
+  &.success,
+  &.completed,
+  &.confirmed,
+  &.done {
+    background: var(--green) !important;
+    color: var(--text-green) !important;
+  }
+
+  &.primary {
+    color: var(--primary-blue);
+    background: var(--blue-gradient);
+  }
+
+  &.secondary,
+  &.pending {
+    background: var(--gray) !important;
+    color: var(--gray) !important;
+  }
+
+  &.minus {
+    background: var(--text-black) !important;
+    color: var(--text-black) !important;
+  }
+
+  &.fail,
+  &.failed,
+  &.error,
+  &.reject,
+  &.rejected,
+  &.canceled {
+    background: var(--text-red) !important;
+    color: var(--text-red) !important;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:before {
+    position: absolute;
+    border-radius: 7px;
+    left: 0;
+    top: 0;
+    height: calc(100% - 4px);
+    width: calc(100% - 4px);
+    margin: 2px;
+    content: "";
+    display: block;
+    background: var(--primary-background);
+  }
+
+  .WalletCard__title {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 4px;
+  }
+
+  .WalletCard__balance {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .WalletCard__balanceUsd {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}

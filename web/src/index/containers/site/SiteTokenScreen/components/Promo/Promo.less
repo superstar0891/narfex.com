@@ -1,0 +1,123 @@
+.SiteTokenScreen__Promo {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  margin: var(--block-margin) auto;
+  margin-top: calc(15vh + 40px);
+
+  .SiteTokenScreen__Promo__content {
+    width: 500px;
+    opacity: 1;
+    transition: opacity 1s ease;
+    transition-delay: .5s;
+
+    h1 {
+      font-size: var(--title1-font-size);
+      line-height: var(--title1-line-height);
+      margin-bottom: 24px;
+    }
+
+    .SiteTokenScreen__Promo__numbers {
+      display: flex;
+      margin: 32px 0 24px;
+
+      .SiteTokenScreen__Promo__numbers__item {
+        position: relative;
+        padding: 0 32px;
+
+        &:before {
+          position: absolute;
+          left: 0;
+          top: 0;
+          content: '';
+          display: block;
+          height: 100%;
+          width: 2px;
+          border-radius: 2px;
+          background: var(--primary-blue);
+        }
+
+        small {
+          color: var(--light-gray);
+          display: block;
+          font-size: inherit;
+          line-height: inherit;
+        }
+
+        strong {
+          display: block;
+          font-size: var(--title2-font-size);
+          line-height: var(--title2-line-height);
+        }
+      }
+    }
+
+    .SiteTokenScreen__Promo__buttons {
+      .Button {
+        min-width: 90px;
+      }
+      .Button.lite {
+        .Button__label {
+          display: flex;
+          align-items: center;
+          color: var(--white);
+
+          svg {
+            margin-left: 4px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .SiteTokenScreen__Promo__logo {
+    margin: auto;
+    display: flex;
+    opacity: 1;
+    transition: opacity 1s ease;
+    transition-delay: .6s;
+
+    .isvg {
+      display: block;
+      margin: auto;
+    }
+  }
+}
+
+.SiteTokenScreen__Promo.notVisible {
+  .SiteTokenScreen__Promo__content,
+  .SiteTokenScreen__Promo__logo {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .SiteTokenScreen__Promo {
+    margin-top: 0;
+    flex-direction: column-reverse;
+
+    .SiteTokenScreen__Promo__content {
+      width: 100%;
+    }
+
+    .SiteTokenScreen__Promo__numbers__item {
+      padding: 0 16px !important;
+    }
+
+    .SiteTokenScreen__Promo__buttons {
+      .Button {
+        width: auto;
+      }
+    }
+  }
+
+  .SiteTokenScreen__Promo__logo {
+    height: 300px;
+
+    svg {
+      width: 160px;
+      height: 160px;
+    }
+  }
+}

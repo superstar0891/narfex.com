@@ -1,0 +1,134 @@
+@import "../../vars";
+
+@animType: ease-in-out;
+@animTime: 400ms;
+
+.SwitchTabs {
+  --indicator-width: 0;
+  --padding: 4px;
+
+  position: relative;
+  color: var(--primary-blue);
+  background: var(--primary-blue-opacity);
+  box-sizing: border-box;
+  border-radius: @border-radius;
+  height: 48px;
+  display: flex;
+  user-select: none;
+  transition: border-color @animTime @animType;
+
+  &.ultra_small {
+    height: 24px;
+  }
+
+  &.small {
+    height: 32px;
+  }
+
+  &.secondary {
+    color: var(--cloudy);
+
+    .SwitchTabs__item {
+      color: var(--text-black);
+      border-color: var(--cloudy);
+
+      &.active {
+        & > span {
+          color: var(--almost-black);
+        }
+      }
+    }
+
+    .SwitchTabs__indicator span {
+      background: var(--cloudy);
+    }
+  }
+
+  &.disabled {
+    opacity: 0.8;
+    pointer-events: none;
+  }
+}
+
+.SwitchTabs__item {
+  position: relative;
+  flex: 1;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 -1px #f00;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 1px;
+    height: calc(100% - 16px);
+    top: 8px;
+    background: var(--primary-blue);
+    opacity: .5;
+    transition: opacity @animTime @animType;
+  }
+
+  & > span {
+    position: relative;
+    z-index: 3;
+  }
+
+  &:first-child::before {
+    display: none;
+  }
+
+  &.active {
+    color: var(--dark-blue);
+  }
+
+  &.active::before,
+  &.active + *::before {
+    opacity: 0;
+  }
+}
+
+.SwitchTabs__indicator {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  transition: transform @animTime @animType;
+  width: calc(1% * var(--indicator-width));
+  transform: translateX(calc(100% * var(--indicator-offset)));
+
+  span {
+    --scale-indicator: 1;
+    display: block;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 0 2px rgba(64, 112, 255, 0.15), 0 2px 4px rgba(64, 112, 255, 0.1);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    right: 4px;
+    will-change: transform;
+  }
+
+  &.animation span {
+    animation: SwitchTabsAnimation @animTime @animType;
+  }
+}
+
+@keyframes SwitchTabsAnimation {
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.3);
+  }
+}

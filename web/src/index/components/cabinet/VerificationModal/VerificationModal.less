@@ -1,0 +1,31 @@
+.VerificationModal {
+  .VerificationModal__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 400px;
+    min-width: 400px;
+  }
+
+  .LoadingStatus__wrap {
+    margin: 24px 0;
+  }
+
+  &.loading,
+  &.failed {
+    .VerificationModal__content {
+      #sumsub {
+        display: none;
+      }
+    }
+  }
+}
+
+.adaptive {
+  .VerificationModal__content {
+    min-height: 100px;
+    min-width: auto;
+  }
+}

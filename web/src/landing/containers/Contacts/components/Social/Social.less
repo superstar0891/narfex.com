@@ -1,0 +1,114 @@
+@import '../../../../../vars';
+
+.Contacts__Social {
+
+  .Contacts__Social__content {
+    text-align: center;
+    padding: 160px 0;
+
+    @media (max-width: @mobile-width) {
+      padding: 80px 0;
+    }
+
+    h2 {
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 56px;
+      margin-bottom: 80px;
+
+      @media (max-width: @mobile-width) {
+        font-size: 36px;
+        line-height: 48px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .Contacts__Social__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 960px;
+    margin: -16px auto;
+  }
+
+  .Contacts__Social__item {
+    text-align: left;
+    display: flex;
+    box-sizing: border-box;
+    width: 448px;
+    height: 112px;
+    background: var(--alice-blue);
+    border: 1px solid var(--cloudy);
+    padding: 24px;
+    align-items: center;
+    color: inherit;
+    border-radius: 24px;
+    margin: 16px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, .1);
+    transition: box-shadow.3s ease;
+
+    @media (max-width: @mobile-width) {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &:hover {
+      background: var(--primary-background);
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+      &.facebook .Contacts__Social__item__icon {
+        color: #0084FF;
+      }
+      &.twitter .Contacts__Social__item__icon {
+        color: #55ACEE;
+      }
+      &.instagram .Contacts__Social__item__icon {
+        color: #E4405F;
+      }
+      &.medium .Contacts__Social__item__icon {
+        color: #02B875;
+      }
+      &.linkedin .Contacts__Social__item__icon {
+        color: #0077B5;
+      }
+    }
+
+    &:active {
+      background: var(--alice-blue);
+      box-shadow: none;
+    }
+
+    h5 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    small {
+      font-size: 16px;
+      line-height: 175%;
+    }
+  }
+
+  .Contacts__Social__item__icon {
+    display: block;
+    margin-right: 16px;
+    color: var(--light-gray);
+    width: 64px;
+    height: 64px;
+
+    @media (max-width: @mobile-width) {
+      margin-right: 0;
+    }
+
+    svg {
+      display: block;
+      width: inherit;
+      height: inherit;
+    }
+  }
+}

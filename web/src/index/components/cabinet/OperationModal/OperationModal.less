@@ -1,0 +1,34 @@
+@import '../../../../vars';
+
+.OperationModal {
+
+  .Modal__box {
+    box-sizing: border-box;
+    width: 576px;
+
+    .WalletCard {
+      margin-top: 32px;
+    }
+  }
+
+  .List {
+    margin: 24px 0;
+
+    .List__item__label {
+      min-width: 136px;
+    }
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .OperationModal {
+    .WalletCard {
+      margin-top: 0 !important;
+    }
+    .List {
+      .List__item__label {
+        min-width: 0;
+      }
+    }
+  }
+}

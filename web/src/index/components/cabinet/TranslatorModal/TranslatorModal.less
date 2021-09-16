@@ -1,0 +1,50 @@
+.Translation {
+  &__wrapper {
+    width: 400px;
+    padding: 30px 40px 40px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--black);
+    margin-bottom: 8px;
+    padding: 0 15px;
+  }
+
+  &__button {
+    text-align: center;
+    margin-top: 40px;
+    .Button {
+      width: 160px;
+    }
+  }
+
+  &__key {
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 28px;
+    padding: 0 15px;
+  }
+
+  &__lang {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    span {
+      width: 16px;
+      cursor: pointer;
+    }
+  }
+}
+
+.adaptive {
+  .Translation {
+    &__wrapper {
+      box-sizing: border-box;
+      padding: 16px;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,199 @@
+.SiteTokenScreen__TokenDataWrapper {
+  background-size: 320px 480px;
+  background-repeat: no-repeat;
+  background-position: calc(50% - 330px) 0;
+  background-image: url("../../../../../../asset/token/bg.svg");
+}
+
+.SiteTokenScreen__TokenData {
+  width: 100%;
+  max-width: 800px;
+  padding-bottom: 42px;
+  margin: var(--block-margin) auto;
+  opacity: 0;
+  transition: opacity 1s ease;
+
+  h2 {
+    font-size: var(--title1-font-size);
+    line-height: var(--title1-line-height);
+    margin-bottom: 40px;
+  }
+
+  .SiteTokenScreen__TokenData__content {
+    p {
+      margin-bottom: 24px;
+    }
+  }
+
+
+  .SiteTokenScreen__TokenData__layout {
+    display: flex;
+  }
+
+  .SiteTokenScreen__TokenData__scaleWrapper {
+    opacity: 0;
+    transform: translate(60px);
+    transition: transform 1s ease, opacity 1s ease;
+    transition-delay: 1s;
+  }
+
+  .SiteTokenScreen__TokenData__scale {
+    position: relative;
+    border: 1px dashed var(--gray);
+    padding: 4px;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    &:before, &:after {
+      position: absolute;
+      border-radius: 2px;
+      content: '';
+      display: block;
+      min-height: 2px;
+      min-width: 2px;
+      background: var(--orange-gradient);
+    }
+
+    .SiteTokenScreen__TokenData__scale__value {
+      background: var(--blue-gradient);
+      border-radius: 16px;
+      min-width: 8px;
+      min-height: 8px;
+      transition: height 1s ease, width 1s ease;
+    }
+  }
+  .SiteTokenScreen__TokenData__scaleLabels {
+    .SiteTokenScreen__TokenData__scaleLabel {
+      small {
+        display: block;
+        font-size: inherit;
+        line-height: inherit;
+        opacity: .7;
+      }
+
+      strong {
+        font-weight: 600;
+        font-size: var(--title2-font-size);
+        line-height: var(--title2-line-height);
+      }
+    }
+  }
+}
+
+.SiteTokenScreen__TokenDataWrapper.isVisible {
+  .SiteTokenScreen__TokenData {
+    opacity: 1;
+  }
+  .SiteTokenScreen__TokenData__scaleWrapper {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
+
+@media (min-width: 800px) {
+  .SiteTokenScreen__TokenData {
+    .SiteTokenScreen__TokenData__scaleWrapper {
+      display: flex;
+      margin-left: 32px;
+    }
+
+    .SiteTokenScreen__TokenData__scaleLabels {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      margin-left: 24px;
+      margin-right: -100px;
+
+      .SiteTokenScreen__TokenData__scaleLabel {
+        width: 240px;
+      }
+    }
+
+    .SiteTokenScreen__TokenData__scale {
+      display: flex;
+
+      &:before, &:after {
+        width: 16px;
+        right: -16px;
+      }
+
+      &:before {
+        top: 4px;
+      }
+
+      &:after {
+        bottom: calc(11.6% + 4px);
+      }
+
+      .SiteTokenScreen__TokenData__scale__value {
+        margin-top: auto;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 800px) {
+
+  .SiteTokenScreen__TokenDataWrapper {
+    margin: 0 -16px;
+    padding: 0 16px;
+    background-size: 384px 576px;
+    background-repeat: no-repeat;
+    background-position: -150px 0;
+    background-image: url("../../../../../../asset/token/bg.svg");
+  }
+
+  .SiteTokenScreen__TokenData {
+    .SiteTokenScreen__TokenData__layout {
+      flex-direction: column;
+    }
+    .SiteTokenScreen__TokenData__scaleWrapper {
+      position: relative;
+      margin-top: 80px;
+      margin-bottom: 24px;
+
+      .SiteTokenScreen__TokenData__scale {
+        display: flex;
+
+        &:before, &:after {
+          height: 16px;
+        }
+
+        &:before {
+          top: -16px;
+          left: calc(11.6% + 4px);
+        }
+
+        &:after {
+          right: 4px;
+          bottom: -16px;
+        }
+
+        .SiteTokenScreen__TokenData__scale__value {
+          background: linear-gradient(0, var(--dark-blue) 0%, var(--primary-blue) 100%);
+        }
+      }
+
+      .SiteTokenScreen__TokenData__scaleLabels {
+        .SiteTokenScreen__TokenData__scaleLabel {
+          &:first-child {
+            position: absolute;
+            top: -68px;
+          }
+          &:last-child {
+            margin-top: 16px;
+            text-align: right;
+          }
+        }
+      }
+    }
+    .ButtonWrapper .Button {
+      margin-left: auto;
+      width: auto;
+    }
+  }
+}

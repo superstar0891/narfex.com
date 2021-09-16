@@ -1,0 +1,82 @@
+@import '../../../../../vars';
+
+.Application {
+  padding: 160px 0;
+  text-align: center;
+
+  @media (max-width: @mobile-width) {
+    padding: 80px 0;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    margin-top: 40px;
+
+    @media (max-width: @mobile-width) {
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+
+  .Application__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: @mobile-width) {
+      flex-direction: column;
+    }
+  }
+
+  .Application__description {
+    text-align: left;
+    max-width: 400px;
+
+    @media (max-width: @mobile-width) {
+      text-align: center;
+
+      .AppButtons {
+        justify-content: center;
+      }
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .Application__image {
+    width: 520px;
+    height: 520px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('./assets/phones.jpg');
+
+    @media (max-width: @mobile-width) {
+      width: 100%;
+      height: auto;
+      margin-bottom: 40px;
+
+      &:before {
+        content: '';
+        display: block;
+        margin-top: 100%;
+      }
+    }
+  }
+
+  &.accent .Application__image {
+    background-image: url('./assets/phones_accent.jpg');
+  }
+}

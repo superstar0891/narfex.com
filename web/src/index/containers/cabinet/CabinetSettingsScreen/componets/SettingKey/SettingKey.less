@@ -1,0 +1,143 @@
+.ApiKey .ContentBox__content,
+.ApiKey__Item .ContentBox__content {
+  padding: 40px 40px 48px;
+}
+
+.ApiKey {
+  margin-bottom: var(--gap-size);
+}
+
+.ApiKey__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.ApiCreateKey__form {
+  display: flex;
+  margin-top: 16px;
+  .Button {
+    margin-left: 16px;
+  }
+}
+
+.ApiKey__Item {
+  margin-bottom: var(--gap-size);
+
+  .ApiKey__block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  .ApiKey__buttons .Button {
+    margin-left: 8px;
+  }
+}
+
+.ApiKey__information-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--gray);
+  margin-bottom: 5px;
+}
+
+.ApiKey__svg {
+  vertical-align: sub;
+  margin-right: 9px;
+}
+
+.ApiKey__key,
+.ApiKey__secret,
+.ApiKey__restrictions {
+  margin-bottom: 24px;
+}
+
+.ApiKey__key,
+.ApiKey__secret {
+  cursor: pointer;
+}
+
+.ApiKey__text,
+.CheckBox__label {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  word-break: break-all;
+}
+
+.ApiKey__restrictions {
+  .CheckBox {
+    display: inline-flex;
+    margin-right: 25px;
+  }
+}
+
+.ApiKey__ipAddress {
+  .Radio {
+    margin-bottom: 10px;
+    .Radio__label {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 16px;
+      //color: var(--black);
+      word-break: break-all;
+
+      span {
+        //color: var(--red);
+      }
+    }
+  }
+  .ApiKey__ipAddAddress {
+    margin-top: 30px;
+    width: 344px;
+    .Input__indicator {
+      cursor: pointer;
+      .svg_basket {
+        margin-top: 5px;
+        opacity: 0.6;
+      }
+      .svg_basket:hover {
+        opacity: 1;
+      }
+    }
+    .Input {
+      margin-bottom: 24px;
+    }
+    .Button {
+      width: 32px;
+      height: 32px;
+      padding: 0 16px;
+    }
+  }
+}
+
+.ApiKey__saveButton {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.adaptive .ApiKey {
+  margin-top: 25px;
+}
+
+.adaptive .ApiKey__ipAddAddress {
+  width: auto;
+}
+
+.adaptive .Radio__indicator {
+  flex: 0 0 auto;
+}
+
+.adaptive {
+  .ApiKey .ContentBox__content,
+  .ApiKey__Item .ContentBox__content {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../../../../vars";
+
+.WelcomeBlock {
+  height: 408px;
+  color: var(--white);
+  background: var(--blue-gradient);
+
+  .WelcomeBlock__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    flex-direction: column;
+    text-align: center;
+
+    h3 {
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 48px;
+      margin-bottom: 56px;
+
+      @media (max-width: @mobile-width) {
+        font-size: 26px;
+        line-height: 32px;
+      }
+    }
+
+    .Button {
+      background: var(--white) !important;
+
+      &:after {
+        opacity: 0;
+      }
+
+      &:hover, &:active {
+        &:before {
+          opacity: 1;
+        }
+
+        &:after {
+          opacity: 0;
+        }
+
+        .Button__label {
+          color: var(--black);
+        }
+      }
+
+      &:active {
+        opacity: .7;
+      }
+    }
+  }
+}

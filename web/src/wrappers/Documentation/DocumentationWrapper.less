@@ -1,0 +1,51 @@
+.Documentation_wrapper {
+  background: var(--alice-blue);
+  min-height: 100%;
+  width: 100%;
+  min-width: 1368px;
+  display: flex;
+  flex-direction: column;
+
+  .LoadingStatus__wrap {
+    width: 100%;
+    height: inherit;
+  }
+
+
+  .Documentation_wrapper__header {
+    position: relative;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+  }
+
+  .Documentation_wrapper__layout {
+    width: 1330px;
+    margin: 0 auto;
+    padding: 24px 0;
+    flex: 1;
+    display: flex;
+  }
+
+  .Documentation_wrapper__menu {
+    width: 200px;
+  }
+
+  .Documentation_wrapper__content {
+    position: relative;
+    width: 640px;
+    flex: 0 0 auto;
+    margin: 0 16px;
+
+    .ContentBox {
+      margin-bottom: 16px;
+    }
+
+    .ContentBox__content {
+      padding: 40px;
+    }
+  }
+  .Documentation_wrapper__subContent {
+    flex: auto;
+  }
+}

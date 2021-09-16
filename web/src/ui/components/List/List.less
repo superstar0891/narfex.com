@@ -1,0 +1,47 @@
+.List {
+  display: table;
+  border-spacing: 16px;
+
+  .List__item {
+    display: table-row;
+
+    &.margin {
+      & > * {
+        padding-bottom: 16px;
+      }
+    }
+
+    .List__item__label,
+    .List__item__value {
+      display: table-cell;
+    }
+
+    .List__item__value {
+      word-break: break-word;
+      display: flex;
+      color: var(--text-black);
+
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .List__item__label {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: right;
+      color: var(--slate-gray);
+    }
+  }
+}
+
+.Admin_wrapper .List__item {
+  .Group {
+    align-items: center;
+  }
+
+  .Button {
+    margin-left: 8px;
+  }
+}

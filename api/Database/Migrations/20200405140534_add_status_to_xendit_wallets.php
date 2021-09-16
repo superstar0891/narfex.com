@@ -1,0 +1,54 @@
+<?php
+
+use Phinx\Migration\AbstractMigration;
+
+class AddStatusToXenditWallets extends AbstractMigration
+{
+    /**
+     * Change Method.
+     *
+     * Write your reversible migrations using this method.
+     *
+     * More information on writing migrations is available here:
+     * http://docs.phinx.org/en/latest/migrations.html#the-abstractmigration-class
+     *
+     * The following commands can be used in this method and Phinx will
+     * automatically reverse them when rolling back:
+     *
+     *    createTable
+     *    renameTable
+     *    addColumn
+     *    addCustomColumn
+     *    renameColumn
+     *    addIndex
+     *    addForeignKey
+     *
+     * Any other destructive changes will result in an error when trying to
+     * rollback the migration.
+     *
+     * Remember to call "create()" or "update()" and NOT "save()" when working
+     * with the Table class.
+     */
+    public function change()
+    {
+        $table = $this->table('xendit_wallets');
+        $table->addColumn('status', 'string', [
+            'limit' => 50,
+            'default' => 'pending',
+            'null' => false,
+            'after' => 'bank_code'
+        ]);
+        $table->changeColumn('user_id', 'integer', [
+            'signed' => false,
+            'null' => true,
+            'limit' => '10',
+        ]);
+        $table->changeColumn('account_number', 'string', [
+            'null' => true,
+            'limit' => '150'
+        ]);
+        $table->addIndex(['status']);
+        $table->addIndex(['account_number']);
+        $table->update();
+    }
+}

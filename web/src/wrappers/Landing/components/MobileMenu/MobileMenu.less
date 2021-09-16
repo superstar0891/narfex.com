@@ -1,0 +1,76 @@
+@import '../../../../vars';
+
+.MobileMenu {
+  padding: 16px;
+  background: var(--alice-blue);
+  display: none;
+
+  @media (max-width: @mobile-width) {
+    &.visible {
+      display: block;
+    }
+  }
+
+  .MobileMenu__buttons {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    margin-bottom: 8px;
+
+    .Button {
+      display: block;
+      margin-bottom: 8px;
+
+      .Button__cont {
+        position: relative; /* HACK */
+      }
+    }
+  }
+
+  .MobileMenu__productList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      padding: 16px 8px;
+      cursor: pointer;
+
+      .isvg {
+        display: block;
+        width: 56px;
+        height: 56px;
+        flex: 0 0 auto;
+        margin-right: 8px;
+
+        svg {
+          display: inherit;
+        }
+      }
+
+      h4 {
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 24px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .MobileMenu__authButtons {
+    display: flex;
+    flex-direction: column;
+
+    .Button {
+      margin-top: 16px;
+    }
+  }
+}

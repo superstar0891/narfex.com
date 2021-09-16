@@ -1,0 +1,135 @@
+@import "../../vars";
+
+.Input {
+  width: 100%;
+  //margin: 16px 0;
+
+  &.focus .Input__wrapper {
+    background: var(--white) !important;
+    color: var(--black) !important;
+    border-color: var(--primary-blue);
+  }
+
+  &.error .Input__wrapper {
+    background: var(--red-opacity);
+    border-color: var(--red);
+    color: var(--text-red);
+
+    .Input__indicator {
+      color: var(--red);
+    }
+  }
+
+  &.small {
+    .Input__input {
+      padding: 3px 8px;
+    }
+
+    .Input__indicator {
+      margin-right: 8px;
+    }
+
+    .Input__description {
+      margin: 4px 8px;
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    .Input__wrapper {
+      background: var(--white);
+    }
+
+    .Input__input {
+      pointer-events: none;
+      color: var(--dark-gray);
+    }
+  }
+}
+
+.Input__wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--alice-blue);
+  border: 1px solid var(--extra-light-gray);
+  color: var(--black);
+  display: flex;
+  width: 100%;
+}
+
+.Input__input,
+.Input__textarea {
+  display: block;
+  color: inherit;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 15px 16px;
+  outline: none;
+  border: none;
+  background: none;
+  box-sizing: border-box;
+  width: inherit;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &::placeholder {
+    color: var(--dark-gray);
+  }
+}
+
+.Input__textarea {
+  resize: vertical;
+  min-height: 6em;
+  max-height: 240px;
+}
+
+.Input__wrapper {
+  position: relative;
+}
+
+.Input__description {
+  color: var(--dark-gray);
+  margin: 8px 16px;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+
+  &.error {
+    color: var(--red);
+  }
+}
+
+.Input__indicator {
+  flex: 0 0 auto;
+  margin: auto 16px;
+  margin-left: 0;
+  color: var(--gray);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+
+  svg {
+    display: block;
+  }
+}
+
+.Input__passwordButton {
+  color: var(--light-gray);
+  cursor: pointer;
+  display: flex;
+  width: 48px;
+
+  &.active {
+    color: var(--dark-gray);
+  }
+
+  svg {
+    display: block;
+    margin: auto;
+  }
+}

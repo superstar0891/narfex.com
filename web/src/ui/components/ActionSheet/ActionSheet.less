@@ -1,0 +1,67 @@
+.ActionsSheet {
+  position: relative;
+  width: fit-content;
+
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .ActionsSheet__list__icon {
+    svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &:not(.visible) .ActionsSheet__list {
+    display: none;
+  }
+
+  .ActionsSheet__list {
+    min-width: 160px;
+    position: absolute !important;
+    z-index: 10;
+    margin: 0;
+    top: 0;
+    left: 0;
+
+    .ContentBox__content {
+      padding: 8px 0;
+    }
+  }
+
+  &.left {
+    .ActionsSheet__list {
+      right: 0;
+      left: auto;
+    }
+  }
+
+  .ActionsSheet__item {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 12px 24px;
+    color: var(--text-black);
+
+    &.destructive .ActionsSheet__item__title {
+      color: var(--text-red);
+    }
+
+    &.primary  .ActionsSheet__item__title {
+      color: var(--dark-blue);
+    }
+
+    &:not(.destructive):hover .ActionsSheet__item__title {
+      color: var(--black);
+    }
+
+    .ActionsSheet__item__sub {
+      margin-left: auto;
+      padding-left: 24px;
+    }
+  }
+}

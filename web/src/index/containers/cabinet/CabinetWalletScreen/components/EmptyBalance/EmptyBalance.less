@@ -1,0 +1,67 @@
+@import "../../../../../../vars";
+
+.WalletEmptyBalance {
+  margin-bottom: var(--gap-size);
+
+  .ContentBox__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 360px;
+    height: 600px;
+    max-height: calc(100vh - 56px - (var(--gap-size, 0) * 2));
+  }
+}
+
+.WalletEmptyBalance__content {
+  width: 320px;
+  text-align: center;
+
+  .CircleIcon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 32px;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+
+  .ButtonWrapper {
+    margin-top: 32px;
+  }
+}
+
+.WalletEmptyBalance__icon {
+  width: 240px;
+  height: 240px;
+  margin: 0 auto 32px;
+
+  .isvg {
+    display: block;
+    width: inherit;
+    height: inherit;
+
+    svg {
+      display: inherit;
+      width: inherit;
+      height: inherit;
+    }
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .WalletEmptyBalance {
+    margin-bottom: var(--gap-size);
+  }
+}

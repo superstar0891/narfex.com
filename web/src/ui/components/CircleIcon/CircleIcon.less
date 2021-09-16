@@ -1,0 +1,91 @@
+.CircleIcon {
+  position: relative;
+  background: var(--cloudy);
+  border-radius: 50%;
+  display: flex;
+  color: var(--text-black);
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+
+  &.type {
+    background: none;
+
+    &:not(.currency):after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: currentColor;
+      content: '';
+      display: block;
+      width: inherit;
+      height: inherit;
+      opacity: .12;
+    }
+
+    &.fail,
+    &.failed,
+    &.error,
+    &.reject,
+    &.canceled {
+      color: var(--red);
+    }
+
+    &.success {
+      color: var(--green);
+    }
+
+    &.primary {
+      color: var(--primary-blue);
+    }
+
+    &.secondary,
+    &.pending {
+      color: var(--gray);
+    }
+
+    &.default {
+      color: var(--text-black);
+
+      &:after {
+        color: var(--gray);
+      }
+    }
+  }
+
+  &.skeleton {
+    animation: skeleton 1s linear infinite;
+  }
+
+  &.medium {
+    height: 40px;
+    width: 40px;
+  }
+
+  &.small {
+    height: 32px;
+    width: 32px;
+  }
+
+  &.extra_small {
+    height: 24px;
+    width: 24px;
+  }
+
+  &.ultra_small {
+    height: 20px;
+    width: 20px;
+  }
+
+  .isvg {
+    margin: auto;
+    height: 24px;
+  }
+
+  .CircleIcon__icon {
+    height: inherit;
+    width: inherit;
+    background-position: center;
+    background-size: contain;
+  }
+}

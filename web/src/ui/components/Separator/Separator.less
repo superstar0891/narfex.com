@@ -1,0 +1,21 @@
+.Separator {
+  --vertical-margin: 8px;
+  --horisontal-margin: 12px;
+
+  display: block;
+  height: 1px;
+  background: var(--black);
+  opacity: .2;
+  margin: var(--vertical-margin) var(--horisontal-margin);
+  width: calc(100% - var(--horisontal-margin) * 2);
+  border: none;
+  transform-origin: center top;
+
+  @media (min-resolution: 2dppx) {
+    transform: scaleY(.5);
+  }
+
+  @media (min-resolution: 3dppx) {
+    transform: scaleY(.32);
+  }
+}

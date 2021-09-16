@@ -1,0 +1,238 @@
+.OrderBook {
+  overflow: hidden;
+  margin-bottom: 0px;
+
+  .ContentBox__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Exchange__block__content {
+    flex: 1;
+  }
+
+  .OrderBook__controls {
+    margin: 0 -4px;
+    display: flex;
+    align-items: center;
+
+    .Button {
+      width: 24px;
+      border-radius: 12px;
+      margin: 0 4px;
+
+      .Button__label {
+        line-height: 0;
+      }
+
+      &.buy {
+        color: var(--green);
+
+        &:not(.secondary) {
+          background: var(--green);
+          color: var(--white);
+        }
+      }
+
+      &.sell {
+        color: var(--red);
+        &:not(.secondary) {
+          background: var(--red);
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  .OrderBook__wrapper {
+    position: relative;
+    display: flex;
+    margin-top: 22px;
+  }
+
+  .OrderBook__title {
+    box-sizing: border-box;
+    margin-left: 24px;
+    padding: 0 6px;
+    width: calc(100% - 24px);
+    height: 20px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: -20px;
+
+    & > div {
+      &:first-child {
+        //text-align: left;
+      }
+
+      font-size: 11px;
+      line-height: 16px;
+      padding: 0 6px;
+      text-align: center;
+      flex: 1;
+    }
+  }
+
+  .OrderBook__indicator {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    width: 24px;
+
+    .OrderBook__indicator__side {
+      position: relative;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 16px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        opacity: 0.2;
+      }
+
+      .OrderBook__indicator__side__fill {
+        position: absolute;
+        width: 100%;
+        opacity: 0.3;
+      }
+
+      &.sell {
+        &::before,
+        .OrderBook__indicator__side__fill {
+          background: var(--red);
+        }
+      }
+
+      &.buy {
+        &::before,
+        .OrderBook__indicator__side__fill {
+          background: var(--green);
+        }
+      }
+      &:first-child {
+        align-items: flex-end;
+
+        .OrderBook__indicator__side__fill {
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  .OrderBook__content {
+    flex: 1;
+  }
+
+  .OrderBook__list {
+    font-family: Roboto;
+    font-size: 11px;
+    line-height: 16px;
+
+    min-height: 24px * 14;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      justify-content: flex-end;
+    }
+  }
+
+  &:not(.all) {
+    .OrderBook__list {
+      display: block;
+      height: 24px * 28;
+    }
+  }
+
+  .OrderBook__ticker {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    background: var(--alice-blue);
+
+    .OrderBook__ticker__price {
+      padding: 0 12px;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+    }
+
+    .OrderBook__ticker__priceUsd {
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 16px;
+    }
+  }
+
+  .OrderBook__order {
+    cursor: pointer;
+    position: relative;
+    padding: 0 6px;
+    height: 24px;
+    display: flex;
+    text-align: right;
+    align-items: center;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+
+    & > * {
+      &:first-child {
+        text-align: left;
+      }
+
+      white-space: nowrap;
+      text-align: right;
+      padding: 0 6px;
+      flex: 1;
+    }
+
+    .OrderBook__order__fill {
+      left: 0;
+      padding: 0;
+      position: absolute;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+
+    &.buy .OrderBook__order__fill {
+      background: var(--green);
+    }
+
+    &.sell .OrderBook__order__fill {
+      background: var(--red);
+    }
+  }
+
+  &.loading {
+    .OrderBook__wrapper {
+      opacity: 0;
+    }
+  }
+}
+
+.adaptive {
+  .OrderBook {
+    .OrderBook__list {
+      min-height: 24px * 6;
+    }
+
+    &:not(.all) {
+      .OrderBook__list {
+        height: 24px * 12;
+      }
+    }
+  }
+}

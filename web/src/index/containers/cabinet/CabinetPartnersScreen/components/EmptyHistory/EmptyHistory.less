@@ -1,0 +1,41 @@
+@import '../../../../../../vars';
+
+.ProfileEmptyHistory {
+  .ContentBox__content {
+    text-align: center;
+    padding: 40px;
+  }
+}
+
+.ProfileEmptyHistory__icon {
+  margin: 0 auto;
+  width: 240px;
+  height: 240px;
+
+  svg {
+    display: block;
+    height: inherit;
+    width: inherit;
+  }
+}
+
+.ProfileEmptyHistory__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 24px 0 16px;
+}
+
+.ProfileEmptyHistory__description {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@media (max-width: @mobile-width) {
+  .ProfileEmptyHistory {
+    .ContentBox__content {
+      padding: 24px 16px;
+    }
+  }
+}

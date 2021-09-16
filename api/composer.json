@@ -1,0 +1,33 @@
+{
+    "require": {
+        "google/appengine-php-sdk": "^1.9",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.5",
+        "robmorgan/phinx": "^0.11.4",
+        "fzaninotto/faker": "^1.9",
+        "google/recaptcha": "^1.2",
+        "xendit/xendit-php": "^2.0",
+        "opis/closure": "^3.5",
+        "phpmailer/phpmailer": "^6.1",
+        "ccxt/ccxt": "^1.33",
+        "phpoffice/phpspreadsheet": "^1.12",
+        "whichbrowser/parser": "^2.0",
+        "ext-openssl": "*",
+        "ext-mbstring": "*",
+        "google/cloud": "^0.136.0",
+        "ext-dom": "*",
+        "ext-curl": "*",
+        "ext-zip": "*",
+        "ext-simplexml": "*"
+    },
+    "require-dev": {
+        "odan/phinx-migrations-generator": "^4.6",
+        "phpunit/phpunit": "^8.5"
+    },
+    "scripts": {
+        "migration:create": "vendor/bin/phinx create",
+        "migration:migrate": "vendor/bin/phinx migrate",
+        "cloud_sql_proxy": "./cloud_sql_proxy -instances=narfex-com:asia-northeast1:common=tcp:3307 &",
+        "deploy": "gcloud app deploy --project=narfex-com"
+    }
+}

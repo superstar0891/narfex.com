@@ -1,0 +1,3 @@
+```
+<ContentBox>Content</ContentBox>
+```
